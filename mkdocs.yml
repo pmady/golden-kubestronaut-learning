@@ -56,6 +56,15 @@ nav:
     - Cloud Native Architecture: kcna/03-cloud-native-architecture.md
     - Cloud Native Observability: kcna/04-cloud-native-observability.md
     - Cloud Native Application Delivery: kcna/05-cloud-native-application-delivery.md
+  - KCSA:
+    - Overview: kcsa/README.md
+    - Cloud Native Security Overview: kcsa/01-cloud-native-security-overview.md
+    - Cluster Component Security: kcsa/02-cluster-component-security.md
+    - Kubernetes Security Fundamentals: kcsa/03-kubernetes-security-fundamentals.md
+    - Kubernetes Threat Model: kcsa/04-kubernetes-threat-model.md
+    - Platform Security: kcsa/05-platform-security.md
+    - Compliance and Security Frameworks: kcsa/06-compliance-security-frameworks.md
+    - Sample Practice Questions: kcsa/sample-questions.md
 
 extra:
   social:
