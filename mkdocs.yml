@@ -22,7 +22,6 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
@@ -50,7 +49,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Study Schedules: study-schedules.md
-  - Kubestronaut:
+  - Kubestronaut (5 Certs):
     - KCNA:
       - Overview: kcna/README.md
       - Kubernetes Fundamentals: kcna/01-kubernetes-fundamentals.md
@@ -68,14 +67,6 @@ nav:
       - Platform Security: kcsa/05-platform-security.md
       - Compliance and Security Frameworks: kcsa/06-compliance-security-frameworks.md
       - Sample Practice Questions: kcsa/sample-questions.md
-    - CKAD:
-      - Overview: ckad/README.md
-      - Application Design and Build: ckad/01-application-design-build.md
-      - Application Deployment: ckad/02-application-deployment.md
-      - Application Observability and Maintenance: ckad/03-application-observability-maintenance.md
-      - Application Environment, Configuration and Security: ckad/04-application-environment-config-security.md
-      - Services and Networking: ckad/05-services-networking.md
-      - Sample Practice Questions: ckad/sample-questions.md
     - CKA:
       - Overview: cka/README.md
       - Cluster Architecture, Installation & Configuration: cka/01-cluster-architecture.md
@@ -84,6 +75,14 @@ nav:
       - Storage: cka/04-storage.md
       - Troubleshooting: cka/05-troubleshooting.md
       - Sample Practice Questions: cka/sample-questions.md
+    - CKAD:
+      - Overview: ckad/README.md
+      - Application Design and Build: ckad/01-application-design-build.md
+      - Application Deployment: ckad/02-application-deployment.md
+      - Application Observability and Maintenance: ckad/03-application-observability-maintenance.md
+      - Application Environment, Configuration and Security: ckad/04-application-environment-config-security.md
+      - Services and Networking: ckad/05-services-networking.md
+      - Sample Practice Questions: ckad/sample-questions.md
     - CKS:
       - Overview: cks/README.md
       - Cluster Setup: cks/01-cluster-setup.md
@@ -93,7 +92,7 @@ nav:
       - Supply Chain Security: cks/05-supply-chain-security.md
       - Monitoring, Logging and Runtime Security: cks/06-monitoring-logging-runtime-security.md
       - Sample Practice Questions: cks/sample-questions.md
-  - Golden Kubestronaut:
+  - Golden Kubestronaut (Additional Certs):
     - PCA:
       - Overview: pca/README.md
       - Observability Concepts: pca/01-observability-concepts.md
@@ -105,7 +104,7 @@ nav:
     - CNPE:
       - Overview: cnpe/README.md
       - Sample Practice Questions: cnpe/sample-questions.md
-  - Additional Certifications:
+  - Other CNCF Certifications:
     - LFCS:
       - Overview: lfcs/README.md
       - Essential Commands: lfcs/01-essential-commands.md
