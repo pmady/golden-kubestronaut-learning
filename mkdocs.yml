@@ -49,6 +49,14 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Study Schedules: study-schedules.md
+  - Hands-on Labs:
+    - KCNA Labs: labs/kcna-labs.md
+    - KCSA Labs: labs/kcsa-labs.md
+    - CKA Labs: labs/cka-labs.md
+    - CKAD Labs: labs/ckad-labs.md
+    - CKS Labs: labs/cks-labs.md
+    - PCA Labs: labs/pca-labs.md
+    - Additional Certification Labs: labs/additional-labs.md
   - Kubestronaut (5 Certs):
     - KCNA:
       - Overview: kcna/README.md
