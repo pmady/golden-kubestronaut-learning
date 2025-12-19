@@ -99,6 +99,37 @@ nav:
     - Instrumentation and Exporters: pca/04-instrumentation-exporters.md
     - Alerting & Dashboarding: pca/05-alerting-dashboarding.md
     - Sample Practice Questions: pca/sample-questions.md
+  - LFCS:
+    - Overview: lfcs/README.md
+    - Essential Commands: lfcs/01-essential-commands.md
+    - Sample Practice Questions: lfcs/sample-questions.md
+  - ICA:
+    - Overview: ica/README.md
+    - Sample Practice Questions: ica/sample-questions.md
+  - CCA:
+    - Overview: cca/README.md
+    - Sample Practice Questions: cca/sample-questions.md
+  - CAPA:
+    - Overview: capa/README.md
+    - Sample Practice Questions: capa/sample-questions.md
+  - CGOA:
+    - Overview: cgoa/README.md
+    - Sample Practice Questions: cgoa/sample-questions.md
+  - CBA:
+    - Overview: cba/README.md
+    - Sample Practice Questions: cba/sample-questions.md
+  - OTCA:
+    - Overview: otca/README.md
+    - Sample Practice Questions: otca/sample-questions.md
+  - KCA:
+    - Overview: kca/README.md
+    - Sample Practice Questions: kca/sample-questions.md
+  - CNPA:
+    - Overview: cnpa/README.md
+    - Sample Practice Questions: cnpa/sample-questions.md
+  - CNPE:
+    - Overview: cnpe/README.md
+    - Sample Practice Questions: cnpe/sample-questions.md
 
 extra:
   social:
