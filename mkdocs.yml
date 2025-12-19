@@ -50,87 +50,90 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Study Schedules: study-schedules.md
-  - KCNA:
-    - Overview: kcna/README.md
-    - Kubernetes Fundamentals: kcna/01-kubernetes-fundamentals.md
-    - Container Orchestration: kcna/02-container-orchestration.md
-    - Cloud Native Architecture: kcna/03-cloud-native-architecture.md
-    - Cloud Native Observability: kcna/04-cloud-native-observability.md
-    - Cloud Native Application Delivery: kcna/05-cloud-native-application-delivery.md
-    - Sample Practice Questions: kcna/sample-questions.md
-  - KCSA:
-    - Overview: kcsa/README.md
-    - Cloud Native Security Overview: kcsa/01-cloud-native-security-overview.md
-    - Cluster Component Security: kcsa/02-cluster-component-security.md
-    - Kubernetes Security Fundamentals: kcsa/03-kubernetes-security-fundamentals.md
-    - Kubernetes Threat Model: kcsa/04-kubernetes-threat-model.md
-    - Platform Security: kcsa/05-platform-security.md
-    - Compliance and Security Frameworks: kcsa/06-compliance-security-frameworks.md
-    - Sample Practice Questions: kcsa/sample-questions.md
-  - CKAD:
-    - Overview: ckad/README.md
-    - Application Design and Build: ckad/01-application-design-build.md
-    - Application Deployment: ckad/02-application-deployment.md
-    - Application Observability and Maintenance: ckad/03-application-observability-maintenance.md
-    - Application Environment, Configuration and Security: ckad/04-application-environment-config-security.md
-    - Services and Networking: ckad/05-services-networking.md
-    - Sample Practice Questions: ckad/sample-questions.md
-  - CKA:
-    - Overview: cka/README.md
-    - Cluster Architecture, Installation & Configuration: cka/01-cluster-architecture.md
-    - Workloads & Scheduling: cka/02-workloads-scheduling.md
-    - Services & Networking: cka/03-services-networking.md
-    - Storage: cka/04-storage.md
-    - Troubleshooting: cka/05-troubleshooting.md
-    - Sample Practice Questions: cka/sample-questions.md
-  - CKS:
-    - Overview: cks/README.md
-    - Cluster Setup: cks/01-cluster-setup.md
-    - Cluster Hardening: cks/02-cluster-hardening.md
-    - System Hardening: cks/03-system-hardening.md
-    - Minimize Microservice Vulnerabilities: cks/04-minimize-microservice-vulnerabilities.md
-    - Supply Chain Security: cks/05-supply-chain-security.md
-    - Monitoring, Logging and Runtime Security: cks/06-monitoring-logging-runtime-security.md
-    - Sample Practice Questions: cks/sample-questions.md
-  - PCA:
-    - Overview: pca/README.md
-    - Observability Concepts: pca/01-observability-concepts.md
-    - Prometheus Fundamentals: pca/02-prometheus-fundamentals.md
-    - PromQL: pca/03-promql.md
-    - Instrumentation and Exporters: pca/04-instrumentation-exporters.md
-    - Alerting & Dashboarding: pca/05-alerting-dashboarding.md
-    - Sample Practice Questions: pca/sample-questions.md
-  - LFCS:
-    - Overview: lfcs/README.md
-    - Essential Commands: lfcs/01-essential-commands.md
-    - Sample Practice Questions: lfcs/sample-questions.md
-  - ICA:
-    - Overview: ica/README.md
-    - Sample Practice Questions: ica/sample-questions.md
-  - CCA:
-    - Overview: cca/README.md
-    - Sample Practice Questions: cca/sample-questions.md
-  - CAPA:
-    - Overview: capa/README.md
-    - Sample Practice Questions: capa/sample-questions.md
-  - CGOA:
-    - Overview: cgoa/README.md
-    - Sample Practice Questions: cgoa/sample-questions.md
-  - CBA:
-    - Overview: cba/README.md
-    - Sample Practice Questions: cba/sample-questions.md
-  - OTCA:
-    - Overview: otca/README.md
-    - Sample Practice Questions: otca/sample-questions.md
-  - KCA:
-    - Overview: kca/README.md
-    - Sample Practice Questions: kca/sample-questions.md
-  - CNPA:
-    - Overview: cnpa/README.md
-    - Sample Practice Questions: cnpa/sample-questions.md
-  - CNPE:
-    - Overview: cnpe/README.md
-    - Sample Practice Questions: cnpe/sample-questions.md
+  - Kubestronaut:
+    - KCNA:
+      - Overview: kcna/README.md
+      - Kubernetes Fundamentals: kcna/01-kubernetes-fundamentals.md
+      - Container Orchestration: kcna/02-container-orchestration.md
+      - Cloud Native Architecture: kcna/03-cloud-native-architecture.md
+      - Cloud Native Observability: kcna/04-cloud-native-observability.md
+      - Cloud Native Application Delivery: kcna/05-cloud-native-application-delivery.md
+      - Sample Practice Questions: kcna/sample-questions.md
+    - KCSA:
+      - Overview: kcsa/README.md
+      - Cloud Native Security Overview: kcsa/01-cloud-native-security-overview.md
+      - Cluster Component Security: kcsa/02-cluster-component-security.md
+      - Kubernetes Security Fundamentals: kcsa/03-kubernetes-security-fundamentals.md
+      - Kubernetes Threat Model: kcsa/04-kubernetes-threat-model.md
+      - Platform Security: kcsa/05-platform-security.md
+      - Compliance and Security Frameworks: kcsa/06-compliance-security-frameworks.md
+      - Sample Practice Questions: kcsa/sample-questions.md
+    - CKAD:
+      - Overview: ckad/README.md
+      - Application Design and Build: ckad/01-application-design-build.md
+      - Application Deployment: ckad/02-application-deployment.md
+      - Application Observability and Maintenance: ckad/03-application-observability-maintenance.md
+      - Application Environment, Configuration and Security: ckad/04-application-environment-config-security.md
+      - Services and Networking: ckad/05-services-networking.md
+      - Sample Practice Questions: ckad/sample-questions.md
+    - CKA:
+      - Overview: cka/README.md
+      - Cluster Architecture, Installation & Configuration: cka/01-cluster-architecture.md
+      - Workloads & Scheduling: cka/02-workloads-scheduling.md
+      - Services & Networking: cka/03-services-networking.md
+      - Storage: cka/04-storage.md
+      - Troubleshooting: cka/05-troubleshooting.md
+      - Sample Practice Questions: cka/sample-questions.md
+    - CKS:
+      - Overview: cks/README.md
+      - Cluster Setup: cks/01-cluster-setup.md
+      - Cluster Hardening: cks/02-cluster-hardening.md
+      - System Hardening: cks/03-system-hardening.md
+      - Minimize Microservice Vulnerabilities: cks/04-minimize-microservice-vulnerabilities.md
+      - Supply Chain Security: cks/05-supply-chain-security.md
+      - Monitoring, Logging and Runtime Security: cks/06-monitoring-logging-runtime-security.md
+      - Sample Practice Questions: cks/sample-questions.md
+  - Golden Kubestronaut:
+    - PCA:
+      - Overview: pca/README.md
+      - Observability Concepts: pca/01-observability-concepts.md
+      - Prometheus Fundamentals: pca/02-prometheus-fundamentals.md
+      - PromQL: pca/03-promql.md
+      - Instrumentation and Exporters: pca/04-instrumentation-exporters.md
+      - Alerting & Dashboarding: pca/05-alerting-dashboarding.md
+      - Sample Practice Questions: pca/sample-questions.md
+    - CNPE:
+      - Overview: cnpe/README.md
+      - Sample Practice Questions: cnpe/sample-questions.md
+  - Additional Certifications:
+    - LFCS:
+      - Overview: lfcs/README.md
+      - Essential Commands: lfcs/01-essential-commands.md
+      - Sample Practice Questions: lfcs/sample-questions.md
+    - ICA:
+      - Overview: ica/README.md
+      - Sample Practice Questions: ica/sample-questions.md
+    - CCA:
+      - Overview: cca/README.md
+      - Sample Practice Questions: cca/sample-questions.md
+    - CAPA:
+      - Overview: capa/README.md
+      - Sample Practice Questions: capa/sample-questions.md
+    - CGOA:
+      - Overview: cgoa/README.md
+      - Sample Practice Questions: cgoa/sample-questions.md
+    - CBA:
+      - Overview: cba/README.md
+      - Sample Practice Questions: cba/sample-questions.md
+    - OTCA:
+      - Overview: otca/README.md
+      - Sample Practice Questions: otca/sample-questions.md
+    - KCA:
+      - Overview: kca/README.md
+      - Sample Practice Questions: kca/sample-questions.md
+    - CNPA:
+      - Overview: cnpa/README.md
+      - Sample Practice Questions: cnpa/sample-questions.md
 
 extra:
   social:
