@@ -49,6 +49,32 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Study Schedules: study-schedules.md
+  - Certification Comparison: certification-comparison.md
+  - Exam Day Tips: exam-tips.md
+  - Video Resources: video-resources.md
+  - Cheat Sheets:
+    - kubectl: cheatsheets/kubectl-cheatsheet.md
+    - Helm: cheatsheets/helm-cheatsheet.md
+    - etcd: cheatsheets/etcd-cheatsheet.md
+    - PromQL: cheatsheets/promql-cheatsheet.md
+  - Flashcards:
+    - kubectl Commands: flashcards/kubectl-flashcards.md
+    - Kubernetes Concepts: flashcards/kubernetes-concepts-flashcards.md
+    - Security Concepts: flashcards/security-flashcards.md
+    - PromQL: flashcards/promql-flashcards.md
+  - YAML Templates:
+    - Pods: templates/pod-templates.md
+    - Deployments: templates/deployment-templates.md
+    - Services: templates/service-templates.md
+    - Ingress: templates/ingress-templates.md
+    - Jobs & CronJobs: templates/job-templates.md
+    - Storage: templates/storage-templates.md
+    - NetworkPolicies: templates/networkpolicy-templates.md
+    - RBAC: templates/rbac-templates.md
+  - Troubleshooting:
+    - Cluster Issues: troubleshooting/cluster-troubleshooting.md
+    - Networking Issues: troubleshooting/networking-troubleshooting.md
+    - Storage Issues: troubleshooting/storage-troubleshooting.md
   - Hands-on Labs:
     - KCNA Labs: labs/kcna-labs.md
     - KCSA Labs: labs/kcsa-labs.md
@@ -111,6 +137,7 @@ nav:
       - Sample Practice Questions: pca/sample-questions.md
     - CNPE:
       - Overview: cnpe/README.md
+      - Platform Engineering: cnpe/01-platform-engineering.md
       - Sample Practice Questions: cnpe/sample-questions.md
     - LFCS:
       - Overview: lfcs/README.md
@@ -118,24 +145,30 @@ nav:
       - Sample Practice Questions: lfcs/sample-questions.md
     - ICA:
       - Overview: ica/README.md
+      - Istio Architecture: ica/01-istio-architecture.md
       - Sample Practice Questions: ica/sample-questions.md
     - CCA:
       - Overview: cca/README.md
+      - Cilium Architecture: cca/01-cilium-architecture.md
       - Sample Practice Questions: cca/sample-questions.md
     - CAPA:
       - Overview: capa/README.md
+      - Argo CD Fundamentals: capa/01-argocd-fundamentals.md
       - Sample Practice Questions: capa/sample-questions.md
     - CGOA:
       - Overview: cgoa/README.md
+      - GitOps Principles: cgoa/01-gitops-principles.md
       - Sample Practice Questions: cgoa/sample-questions.md
     - CBA:
       - Overview: cba/README.md
       - Sample Practice Questions: cba/sample-questions.md
     - OTCA:
       - Overview: otca/README.md
+      - OpenTelemetry Fundamentals: otca/01-opentelemetry-fundamentals.md
       - Sample Practice Questions: otca/sample-questions.md
     - KCA:
       - Overview: kca/README.md
+      - Kyverno Fundamentals: kca/01-kyverno-fundamentals.md
       - Sample Practice Questions: kca/sample-questions.md
     - CNPA:
       - Overview: cnpa/README.md
