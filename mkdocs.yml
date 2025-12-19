@@ -91,6 +91,14 @@ nav:
     - Supply Chain Security: cks/05-supply-chain-security.md
     - Monitoring, Logging and Runtime Security: cks/06-monitoring-logging-runtime-security.md
     - Sample Practice Questions: cks/sample-questions.md
+  - PCA:
+    - Overview: pca/README.md
+    - Observability Concepts: pca/01-observability-concepts.md
+    - Prometheus Fundamentals: pca/02-prometheus-fundamentals.md
+    - PromQL: pca/03-promql.md
+    - Instrumentation and Exporters: pca/04-instrumentation-exporters.md
+    - Alerting & Dashboarding: pca/05-alerting-dashboarding.md
+    - Sample Practice Questions: pca/sample-questions.md
 
 extra:
   social:
