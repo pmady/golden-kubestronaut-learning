@@ -104,7 +104,6 @@ nav:
     - CNPE:
       - Overview: cnpe/README.md
       - Sample Practice Questions: cnpe/sample-questions.md
-  - Other CNCF Certifications:
     - LFCS:
       - Overview: lfcs/README.md
       - Essential Commands: lfcs/01-essential-commands.md
