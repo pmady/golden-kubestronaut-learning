@@ -220,7 +220,7 @@ Complete guide to booking and scheduling CNCF certification exams with tips, bes
 ### Support Channels
 - **Live Chat**: Available during exam
 - **Phone Support**: +1-800-733-9267
-- **Email Support**: support@psionline.com
+- **Email Support**: [support@psionline.com](mailto:support@psionline.com)
 - **Help Center**: [PSI Support](https://www.psionline.com/support)
 
 ### Response Times
@@ -237,7 +237,7 @@ Complete guide to booking and scheduling CNCF certification exams with tips, bes
 3. **Morning Times**: Peak performance hours
 4. **Avoid Holidays**: Limited support coverage
 
-### Preparation Timeline
+### Study Timeline
 1. **8 Weeks Out**: Book exam date
 2. **6 Weeks Out**: Begin structured study
 3. **4 Weeks Out**: Practice exams start
@@ -318,9 +318,9 @@ Complete guide to booking and scheduling CNCF certification exams with tips, bes
 - **Scheduling Issues**: +1-800-733-9267
 
 ### Pre-Exam Questions
-- **General Inquiries**: certification@cncf.io
-- **Technical Support**: support@psionline.com
-- **Accommodations**: accommodations@psionline.com
+- **General Inquiries**: [certification@cncf.io](mailto:certification@cncf.io)
+- **Technical Support**: [support@psionline.com](mailto:support@psionline.com)
+- **Accommodations**: [accommodations@psionline.com](mailto:accommodations@psionline.com)
 
 ### Social Media
 - **Twitter**: @CloudNativeFDN
