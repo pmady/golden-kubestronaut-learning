@@ -54,6 +54,7 @@ nav:
   - Exam Booking & Scheduling: exam-booking-scheduling.md
   - Command Line Aliases: aliases-generator.md
   - Exam Day Tips: exam-tips.md
+  - Certification Cost Calculator: certification-cost-calculator.md
   - Video Resources: video-resources.md
   - Cheat Sheets:
     - kubectl: cheatsheets/kubectl-cheatsheet.md
