@@ -28,6 +28,12 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+  
+  # Custom CSS and JS for the certification cost calculator
+  extra_css:
+    - css/cert-cost-calculator.css
+  extra_javascript:
+    - js/cert-cost-calculator.js
 
 plugins:
   - search

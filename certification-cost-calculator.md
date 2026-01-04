@@ -2,6 +2,104 @@
 
 Estimate the total cost of your CNCF certification journey with this interactive calculator.
 
+## 🧮 Interactive Cost Calculator
+
+<div class="cert-calculator" id="cert-calculator">
+    <div class="calculator-section">
+        <h3>1. Select Certifications</h3>
+        <div class="cert-grid">
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="KCNA"> KCNA
+                <span class="tooltip">?<span class="tooltiptext">Kubernetes and Cloud Native Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CKA"> CKA
+                <span class="tooltip">?<span class="tooltiptext">Certified Kubernetes Administrator</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CKAD"> CKAD
+                <span class="tooltip">?<span class="tooltiptext">Certified Kubernetes Application Developer</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CKS"> CKS
+                <span class="tooltip">?<span class="tooltiptext">Certified Kubernetes Security Specialist</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="KCSA"> KCSA
+                <span class="tooltip">?<span class="tooltiptext">Kubernetes and Cloud Native Security Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CNPA"> CNPA
+                <span class="tooltip">?<span class="tooltiptext">Certified Nocalhost Professional Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CNPE"> CNPE
+                <span class="tooltip">?<span class="tooltiptext">Certified Nocalhost Professional Expert</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CGOA"> CGOA
+                <span class="tooltip">?<span class="tooltiptext">Certified GitOps Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="CCA"> CCA
+                <span class="tooltip">?<span class="tooltiptext">Certified Chaos Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="PCA"> PCA
+                <span class="tooltip">?<span class="tooltiptext">Prometheus Certified Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="ICA"> ICA
+                <span class="tooltip">?<span class="tooltiptext">Istio Certified Associate</span></span>
+            </label>
+            <label class="cert-option">
+                <input type="checkbox" class="cert-checkbox" value="OTCA"> OTCA
+                <span class="tooltip">?<span class="tooltiptext">OpenTelemetry Certified Associate</span></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="calculator-section">
+        <h3>2. Additional Costs</h3>
+        <div class="cost-inputs">
+            <div class="input-group">
+                <label for="training-cost">Estimated Training Costs ($):</label>
+                <input type="number" id="training-cost" min="0" step="0.01" value="0">
+            </div>
+            <div class="input-group">
+                <label for="additional-cost">Other Expenses ($):</label>
+                <input type="number" id="additional-cost" min="0" step="0.01" value="0">
+            </div>
+            <div class="input-group">
+                <label for="retake-count">Number of Retakes (max 3):</label>
+                <input type="number" id="retake-count" min="0" max="3" step="1" value="0">
+            </div>
+        </div>
+    </div>
+
+    <div class="calculator-section">
+        <h3>Cost Summary</h3>
+        <div class="results">
+            <div class="result-item">
+                <span>Exam Fees:</span>
+                <span id="exam-total">$0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Training Costs:</span>
+                <span id="training-total">$0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Additional Expenses:</span>
+                <span id="additional-total">$0.00</span>
+            </div>
+            <div class="result-item total">
+                <span>Total Estimated Cost:</span>
+                <span id="grand-total">$0.00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 ## 📊 Cost Breakdown
 
 ### 1. Exam Fees
