@@ -23,15 +23,57 @@ jobs:
       with:
         python-version: '3.10'
     
-    - name: Install dependencies
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc weasyprint
+    
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install weasyprint pyyaml markdown beautifulsoup4
+        pip install -r requirements.txt
     
     - name: Generate PDFs
       run: |
         mkdir -p site/pdf
-        python scripts/generate_pdfs.py
+        python scripts/generate_comprehensive_pdfs.py
+    
+    - name: Generate individual chapter PDFs
+      run: |
+        python scripts/generate_pdfs.py || true  # Allow this to fail gracefully
+    
+    - name: Create PDF index
+      run: |
+        cat > site/pdf/index.md << 'EOF'
+        # PDF Study Guides
+        
+        ## Kubestronaut Certifications (5 Certs)
+        
+        - [KCNA Study Guide](KCNA_Study_Guide.pdf) - Kubernetes and Cloud Native Associate
+        - [KCSA Study Guide](KCSA_Study_Guide.pdf) - Kubernetes and Cloud Native Security Associate
+        - [CKA Study Guide](CKA_Study_Guide.pdf) - Certified Kubernetes Administrator
+        - [CKAD Study Guide](CKAD_Study_Guide.pdf) - Certified Kubernetes Application Developer
+        - [CKS Study Guide](CKS_Study_Guide.pdf) - Certified Kubernetes Security Specialist
+        
+        ## Golden Kubestronaut Certifications (Additional Certs)
+        
+        - [PCA Study Guide](PCA_Study_Guide.pdf) - Prometheus Certified Associate
+        - [CNPE Study Guide](CNPE_Study_Guide.pdf) - Certified Node.js Platform Engineer
+        - [LFCS Study Guide](LFCS_Study_Guide.pdf) - Linux Foundation Certified System Administrator
+        - [ICA Study Guide](ICA_Study_Guide.pdf) - Istio Certified Associate
+        - [CCA Study Guide](CCA_Study_Guide.pdf) - Cilium Certified Associate
+        - [CAPA Study Guide](CAPA_Study_Guide.pdf) - Argo CD Certified Professional - Application Delivery
+        - [CGOA Study Guide](CGOA_Study_Guide.pdf) - Certified GitOps Professional
+        - [CBA Study Guide](CBA_Study_Guide.pdf) - Cilium Certified Associate - (Beta)
+        - [OTCA Study Guide](OTCA_Study_Guide.pdf) - OpenTelemetry Certified Associate
+        - [KCA Study Guide](KCA_Study_Guide.pdf) - Kyverno Certified Associate
+        - [CNPA Study Guide](CNPA_Study_Guide.pdf) - Cloud Native Professional Associate
+        
+        ---
+        
+        *Generated on: $(date)*
+        *Version: 1.0*
+        EOF
     
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'

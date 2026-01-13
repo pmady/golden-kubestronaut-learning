@@ -2,6 +2,18 @@
 
 [![KCA](https://img.shields.io/badge/CNCF-KCA-00ADD8?style=for-the-badge&logo=kubernetes&logoColor=white)](https://training.linuxfoundation.org/certification/kyverno-certified-associate-kca/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/KCA_Study_Guide.pdf)
+
+**Get the complete KCA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download KCA Study Guide PDF](/pdf/KCA_Study_Guide.pdf)
+
 The **Kyverno Certified Associate (KCA)** exam demonstrates knowledge of Kubernetes policy management using Kyverno.
 
 ## Exam Overview

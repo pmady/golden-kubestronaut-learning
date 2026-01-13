@@ -2,6 +2,18 @@
 
 [![KCNA](https://img.shields.io/badge/CNCF-KCNA-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/KCNA_Study_Guide.pdf)
+
+**Get the complete KCNA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download KCNA Study Guide PDF](/pdf/KCNA_Study_Guide.pdf)
+
 The **Kubernetes and Cloud Native Associate (KCNA)** exam demonstrates a user's foundational knowledge and skills in Kubernetes and the wider cloud native ecosystem.
 
 ## Exam Overview

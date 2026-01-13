@@ -2,6 +2,18 @@
 
 [![CAPA](https://img.shields.io/badge/CNCF-CAPA-EF7B4D?style=for-the-badge&logo=argo&logoColor=white)](https://training.linuxfoundation.org/certification/certified-argo-project-associate-capa/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CAPA_Study_Guide.pdf)
+
+**Get the complete CAPA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CAPA Study Guide PDF](/pdf/CAPA_Study_Guide.pdf)
+
 The **Certified Argo Project Associate (CAPA)** exam demonstrates knowledge of GitOps principles and the Argo project ecosystem.
 
 ## Exam Overview

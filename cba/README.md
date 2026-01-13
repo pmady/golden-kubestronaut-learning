@@ -2,6 +2,18 @@
 
 [![CBA](https://img.shields.io/badge/CNCF-CBA-9BF0E1?style=for-the-badge&logo=backstage&logoColor=black)](https://training.linuxfoundation.org/certification/certified-backstage-associate-cba/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CBA_Study_Guide.pdf)
+
+**Get the complete CBA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CBA Study Guide PDF](/pdf/CBA_Study_Guide.pdf)
+
 The **Certified Backstage Associate (CBA)** exam demonstrates knowledge of Backstage, the open platform for building developer portals.
 
 ## Exam Overview

@@ -4,6 +4,18 @@
 
 The **Certified Kubernetes Security Specialist (CKS)** exam certifies that candidates have the skills, knowledge, and competency to perform a broad range of best practices for securing container-based applications and Kubernetes platforms during build, deployment, and runtime.
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CKS_Study_Guide.pdf)
+
+**Get the complete CKS Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CKS Study Guide PDF](/pdf/CKS_Study_Guide.pdf)
+
 ## Exam Overview
 
 | Detail | Information |

@@ -4,6 +4,18 @@
 
 The **Certified Kubernetes Application Developer (CKAD)** exam certifies that candidates can design, build, and deploy cloud native applications for Kubernetes.
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CKAD_Study_Guide.pdf)
+
+**Get the complete CKAD Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CKAD Study Guide PDF](/pdf/CKAD_Study_Guide.pdf)
+
 ## Exam Overview
 
 | Detail | Information |

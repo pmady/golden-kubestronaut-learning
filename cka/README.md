@@ -4,6 +4,18 @@
 
 The **Certified Kubernetes Administrator (CKA)** exam certifies that candidates have the skills, knowledge, and competency to perform the responsibilities of Kubernetes administrators.
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CKA_Study_Guide.pdf)
+
+**Get the complete CKA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CKA Study Guide PDF](/pdf/CKA_Study_Guide.pdf)
+
 ## Exam Overview
 
 | Detail | Information |

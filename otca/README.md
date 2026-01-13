@@ -2,6 +2,18 @@
 
 [![OTCA](https://img.shields.io/badge/CNCF-OTCA-F5A800?style=for-the-badge&logo=opentelemetry&logoColor=black)](https://training.linuxfoundation.org/certification/opentelemetry-certified-associate-otca/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/OTCA_Study_Guide.pdf)
+
+**Get the complete OTCA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download OTCA Study Guide PDF](/pdf/OTCA_Study_Guide.pdf)
+
 The **OpenTelemetry Certified Associate (OTCA)** exam demonstrates knowledge of observability concepts and OpenTelemetry implementation.
 
 ## Exam Overview

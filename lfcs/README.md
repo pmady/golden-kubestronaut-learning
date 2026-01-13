@@ -2,6 +2,18 @@
 
 [![LFCS](https://img.shields.io/badge/Linux_Foundation-LFCS-0A0A0A?style=for-the-badge&logo=linux&logoColor=white)](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/LFCS_Study_Guide.pdf)
+
+**Get the complete LFCS Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download LFCS Study Guide PDF](/pdf/LFCS_Study_Guide.pdf)
+
 The **Linux Foundation Certified SysAdmin (LFCS)** exam demonstrates a candidate's proficiency in Linux system administration.
 
 ## Exam Overview

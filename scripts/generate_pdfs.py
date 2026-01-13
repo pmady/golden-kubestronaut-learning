@@ -60,7 +60,7 @@ def generate_pdf(input_path, output_path, title):
     html_content = markdown(content, extensions=['tables', 'fenced_code', 'codehilite'])
     
     # Create a complete HTML document
-    html = f"""
+    html_template = """
     <!DOCTYPE html>
     <html>
     <head>
@@ -142,7 +142,9 @@ def generate_pdf(input_path, output_path, title):
         {content}
     </body>
     </html>
-    """.format(title=title, content=html_content)
+    """
+    
+    html = html_template.format(title=title, content=html_content)
     
     # Generate PDF
     HTML(string=html).write_pdf(output_path)

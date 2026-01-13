@@ -2,6 +2,18 @@
 
 [![CCA](https://img.shields.io/badge/CNCF-CCA-F8C517?style=for-the-badge&logo=cilium&logoColor=black)](https://training.linuxfoundation.org/certification/cilium-certified-associate-cca/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CCA_Study_Guide.pdf)
+
+**Get the complete CCA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CCA Study Guide PDF](/pdf/CCA_Study_Guide.pdf)
+
 The **Cilium Certified Associate (CCA)** exam demonstrates knowledge of eBPF-based networking, security, and observability with Cilium.
 
 ## Exam Overview

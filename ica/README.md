@@ -2,6 +2,18 @@
 
 [![ICA](https://img.shields.io/badge/CNCF-ICA-466BB0?style=for-the-badge&logo=istio&logoColor=white)](https://training.linuxfoundation.org/certification/istio-certified-associate-ica/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/ICA_Study_Guide.pdf)
+
+**Get the complete ICA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download ICA Study Guide PDF](/pdf/ICA_Study_Guide.pdf)
+
 The **Istio Certified Associate (ICA)** exam demonstrates a candidate's knowledge of Istio service mesh concepts and practical skills.
 
 ## Exam Overview

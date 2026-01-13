@@ -2,6 +2,18 @@
 
 [![PCA](https://img.shields.io/badge/CNCF-PCA-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](https://training.linuxfoundation.org/certification/prometheus-certified-associate/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/PCA_Study_Guide.pdf)
+
+**Get the complete PCA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download PCA Study Guide PDF](/pdf/PCA_Study_Guide.pdf)
+
 The **Prometheus Certified Associate (PCA)** exam demonstrates an engineer's foundational knowledge of observability and skills using Prometheus, the open source systems monitoring and alerting toolkit.
 
 ## Exam Overview

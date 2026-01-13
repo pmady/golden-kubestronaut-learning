@@ -2,6 +2,18 @@
 
 [![CGOA](https://img.shields.io/badge/CNCF-CGOA-326CE5?style=for-the-badge&logo=git&logoColor=white)](https://training.linuxfoundation.org/certification/certified-gitops-associate-cgoa/)
 
+## 📥 Download Study Guide
+
+[![PDF Download](https://img.shields.io/badge/PDF-Download-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](/pdf/CGOA_Study_Guide.pdf)
+
+**Get the complete CGOA Study Guide as a printable PDF:**
+- 📚 All chapters combined into one document
+- 📑 Printer-friendly formatting with table of contents
+- 🔖 Page numbers and navigation
+- 📱 Optimized for offline study
+
+[Download CGOA Study Guide PDF](/pdf/CGOA_Study_Guide.pdf)
+
 The **Certified GitOps Associate (CGOA)** exam demonstrates knowledge of GitOps principles, practices, and related technologies.
 
 ## Exam Overview
