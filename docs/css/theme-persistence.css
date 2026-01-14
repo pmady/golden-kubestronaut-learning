@@ -1,0 +1,294 @@
+/**
+ * Enhanced Dark Mode Theme Support
+ * Provides improved styling for both light and dark themes with smooth transitions
+ */
+
+/* Smooth transitions for theme switching */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Enhanced dark mode code blocks */
+[data-theme="slate"] .md-typeset code,
+[data-theme="slate"] .md-typeset pre {
+    background-color: #2d2d2d !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #444 !important;
+}
+
+[data-theme="slate"] .md-typeset .codehilite {
+    background-color: #2d2d2d !important;
+    color: #e8e8e8 !important;
+}
+
+[data-theme="slate"] .md-typeset .codehilite .hll {
+    background-color: #404040 !important;
+}
+
+/* Syntax highlighting in dark mode */
+[data-theme="slate"] .md-typeset .codehilite .c,
+[data-theme="slate"] .md-typeset .codehilite .cm,
+[data-theme="slate"] .md-typeset .codehilite .c1 {
+    color: #6a9955 !important;
+}
+
+[data-theme="slate"] .md-typeset .codehilite .k,
+[data-theme="slate"] .md-typeset .codehilite .kc,
+[data-theme="slate"] .md-typeset .codehilite .kd {
+    color: #569cd6 !important;
+}
+
+[data-theme="slate"] .md-typeset .codehilite .s,
+[data-theme="slate"] .md-typeset .codehilite .s1,
+[data-theme="slate"] .md-typeset .codehilite .s2 {
+    color: #ce9178 !important;
+}
+
+[data-theme="slate"] .md-typeset .codehilite .nf,
+[data-theme="slate"] .md-typeset .codehilite .nb {
+    color: #dcdcaa !important;
+}
+
+/* Enhanced dark mode tables */
+[data-theme="slate"] .md-typeset table:not([class]) {
+    background-color: #2d2d2d !important;
+    color: #e8e8e8 !important;
+}
+
+[data-theme="slate"] .md-typeset table:not([class]) th {
+    background-color: #404040 !important;
+    color: #ffffff !important;
+    border-color: #555 !important;
+}
+
+[data-theme="slate"] .md-typeset table:not([class]) td {
+    border-color: #555 !important;
+}
+
+/* Enhanced dark mode admonitions */
+[data-theme="slate"] .md-typeset .admonition {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="slate"] .md-typeset .admonition.note {
+    background-color: #1a3a52 !important;
+    border-color: #4dabf7 !important;
+}
+
+[data-theme="slate"] .md-typeset .admonition.warning {
+    background-color: #4a3a1a !important;
+    border-color: #ffd43b !important;
+}
+
+[data-theme="slate"] .md-typeset .admonition.danger,
+[data-theme="slate"] .md-typeset .admonition.error {
+    background-color: #4a1a1a !important;
+    border-color: #ff6b6b !important;
+}
+
+/* Enhanced dark mode blockquotes */
+[data-theme="slate"] .md-typeset blockquote {
+    background-color: #2d2d2d !important;
+    border-left-color: #666 !important;
+    color: #ccc !important;
+}
+
+/* Enhanced dark mode links */
+[data-theme="slate"] .md-typeset a {
+    color: #58a6ff !important;
+}
+
+[data-theme="slate"] .md-typeset a:hover {
+    color: #79c0ff !important;
+}
+
+/* Enhanced dark mode navigation */
+[data-theme="slate"] .md-nav__link--active {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+[data-theme="slate"] .md-nav__link:hover {
+    background-color: #333 !important;
+}
+
+/* Enhanced dark mode search */
+[data-theme="slate"] .md-search__form {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="slate"] .md-search__input {
+    background-color: #2d2d2d !important;
+    color: #e8e8e8 !important;
+}
+
+[data-theme="slate"] .md-search__suggest {
+    background-color: #404040 !important;
+    color: #e8e8e8 !important;
+}
+
+/* Enhanced dark mode header */
+[data-theme="slate"] .md-header {
+    background-color: #1a1a1a !important;
+    border-bottom-color: #333 !important;
+}
+
+/* Enhanced dark mode sidebar */
+[data-theme="slate"] .md-sidebar {
+    background-color: #1a1a1a !important;
+    border-right-color: #333 !important;
+}
+
+/* Enhanced dark mode footer */
+[data-theme="slate"] .md-footer {
+    background-color: #1a1a1a !important;
+    border-top-color: #333 !important;
+}
+
+/* Enhanced dark mode tabs */
+[data-theme="slate"] .md-typeset .tabbed-set > label {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e8e8e8 !important;
+}
+
+[data-theme="slate"] .md-typeset .tabbed-set > input:checked + label {
+    background-color: #404040 !important;
+    border-color: #58a6ff !important;
+    color: #fff !important;
+}
+
+/* Enhanced dark mode details/summary */
+[data-theme="slate"] .md-typeset details {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="slate"] .md-typeset summary {
+    background-color: #404040 !important;
+    color: #e8e8e8 !important;
+}
+
+/* Enhanced dark mode images and diagrams */
+[data-theme="slate"] img {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="slate"] img:hover {
+    opacity: 1;
+}
+
+/* Dark mode SVG icons */
+[data-theme="slate"] .twemoji svg {
+    fill: #e8e8e8 !important;
+}
+
+/* Enhanced dark mode badges */
+[data-theme="slate"] .md-typeset .badge {
+    background-color: #404040 !important;
+    color: #e8e8e8 !important;
+    border-color: #555 !important;
+}
+
+/* Enhanced dark mode progress bars */
+[data-theme="slate"] .md-typeset progress {
+    background-color: #2d2d2d !important;
+}
+
+[data-theme="slate"] .md-typeset progress::-webkit-progress-bar {
+    background-color: #2d2d2d !important;
+}
+
+[data-theme="slate"] .md-typeset progress::-webkit-progress-value {
+    background-color: #58a6ff !important;
+}
+
+/* Enhanced dark mode form elements */
+[data-theme="slate"] .md-typeset input,
+[data-theme="slate"] .md-typeset select,
+[data-theme="slate"] .md-typeset textarea {
+    background-color: #2d2d2d !important;
+    color: #e8e8e8 !important;
+    border-color: #444 !important;
+}
+
+[data-theme="slate"] .md-typeset input:focus,
+[data-theme="slate"] .md-typeset select:focus,
+[data-theme="slate"] .md-typeset textarea:focus {
+    border-color: #58a6ff !important;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2) !important;
+}
+
+/* System preference toggle styling */
+.system-theme-toggle {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    border: 1px solid var(--md-primary-bg-color);
+    transition: all 0.3s ease;
+}
+
+.system-theme-toggle:hover {
+    background-color: var(--md-primary-fg-color--light);
+    transform: translateY(-1px);
+}
+
+.system-theme-toggle:active {
+    transform: translateY(0);
+}
+
+/* Enhanced dark mode for certification cost calculator */
+[data-theme="slate"] .calculator-container {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="slate"] .calculator-input {
+    background-color: #404040 !important;
+    color: #e8e8e8 !important;
+    border-color: #555 !important;
+}
+
+[data-theme="slate"] .calculator-result {
+    background-color: #404040 !important;
+    color: #e8e8e8 !important;
+}
+
+/* Print optimization */
+@media print {
+    body {
+        transition: none !important;
+    }
+    
+    .system-theme-toggle {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    [data-theme="slate"] .md-typeset code,
+    [data-theme="slate"] .md-typeset pre {
+        border-width: 2px !important;
+    }
+    
+    [data-theme="slate"] .md-typeset a {
+        text-decoration: underline !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    body,
+    img,
+    .system-theme-toggle,
+    .md-typeset * {
+        transition: none !important;
+    }
+}
