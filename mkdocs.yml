@@ -15,12 +15,14 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+      media: "(prefers-color-scheme: light)"
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+      media: "(prefers-color-scheme: dark)"
   features:
     - navigation.sections
     - navigation.expand
@@ -29,11 +31,13 @@ theme:
     - search.highlight
     - content.code.copy
   
-  # Custom CSS and JS for the certification cost calculator
+  # Custom CSS and JS files
   extra_css:
     - css/cert-cost-calculator.css
+    - css/theme-persistence.css
   extra_javascript:
     - js/cert-cost-calculator.js
+    - js/theme-persistence.js
 
 plugins:
   - search
