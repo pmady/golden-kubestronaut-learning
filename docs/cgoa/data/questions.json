@@ -1,0 +1,748 @@
+[
+  {
+    "question": "Which of the following best describes GitOps?",
+    "choices": [
+      "A tool for managing Git repositories",
+      "A declarative approach to continuous delivery using Git as the source of truth",
+      "A type of version control system",
+      "A method for managing application logs"
+    ],
+    "correct": 1,
+    "section": "GitOps Terminology",
+    "explanation": "GitOps is fundamentally about using Git as the single source of truth for declarative infrastructure and applications."
+  },
+  {
+    "question": "What is the primary role of a GitOps operator?",
+    "choices": [
+      "To manually deploy applications",
+      "To write deployment scripts",
+      "To monitor Git repositories and reconcile cluster state",
+      "To manage user access to Git repositories"
+    ],
+    "correct": 2,
+    "section": "GitOps Terminology",
+    "explanation": "GitOps operators continuously monitor Git repositories and automatically reconcile the actual state of the cluster with the desired state defined in Git."
+  },
+  {
+    "question": "Which component serves as the single source of truth in GitOps?",
+    "choices": [
+      "The Git repository",
+      "The production cluster",
+      "The CI pipeline",
+      "The container registry"
+    ],
+    "correct": 0,
+    "section": "GitOps Terminology",
+    "explanation": "In GitOps, the Git repository serves as the single source of truth, containing the desired state of the entire system."
+  },
+  {
+    "question": "What is meant by 'declarative configuration' in GitOps?",
+    "choices": [
+      "Using scripts to define system changes",
+      "Writing deployment documentation",
+      "Creating manual deployment procedures",
+      "Describing the desired system state rather than the steps to achieve it"
+    ],
+    "correct": 3,
+    "section": "GitOps Terminology",
+    "explanation": "Declarative configuration focuses on what the end state should be, not the specific commands or steps to reach that state."
+  },
+  {
+    "question": "Which term describes the process of ensuring the actual state matches the desired state?",
+    "choices": ["State matching", "Reconciliation", "Deployment", "Activation"],
+    "correct": 1,
+    "section": "GitOps Terminology",
+    "explanation": "Reconciliation is the process of ensuring the actual state of the system matches the desired state defined in Git."
+  },
+  {
+    "question": "What is drift in the context of GitOps?",
+    "choices": [
+      "When the actual state differs from the desired state",
+      "When code changes are pushed to production",
+      "When Git repositories are out of sync",
+      "When applications fail to deploy"
+    ],
+    "correct": 0,
+    "section": "GitOps Terminology",
+    "explanation": "Drift occurs when the runtime environment (actual state) no longer matches the configuration defined in Git (desired state)."
+  },
+  {
+    "question": "Which process ensures changes are consistently applied across environments?",
+    "choices": [
+      "Manual deployment",
+      "Version control",
+      "Code review",
+      "Continuous reconciliation"
+    ],
+    "correct": 3,
+    "section": "GitOps Terminology",
+    "explanation": "Continuous reconciliation ensures changes are consistently applied by constantly comparing and aligning the actual state with the desired state."
+  },
+  {
+    "question": "What is the role of pull requests in GitOps?",
+    "choices": [
+      "To deploy code to production",
+      "To monitor system health",
+      "To propose and review changes to system state",
+      "To manage container images"
+    ],
+    "correct": 2,
+    "section": "GitOps Terminology",
+    "explanation": "Pull requests provide a mechanism to propose, review, and approve changes to the system state before they are applied."
+  },
+  {
+    "question": "Which environment type typically has the strictest change control in GitOps?",
+    "choices": ["Development", "Testing", "Staging", "Production"],
+    "correct": 3,
+    "section": "GitOps Terminology",
+    "explanation": "Production environments typically have the strictest change control procedures to ensure stability and reliability."
+  },
+  {
+    "question": "What is the purpose of branch protection rules in GitOps?",
+    "choices": [
+      "To prevent unauthorized changes to critical branches",
+      "To speed up deployments",
+      "To automate testing",
+      "To manage dependencies"
+    ],
+    "correct": 0,
+    "section": "GitOps Terminology",
+    "explanation": "Branch protection rules prevent direct modifications to important branches, ensuring all changes go through proper review processes."
+  },
+  {
+    "question": "Which of the following is NOT one of the four key GitOps principles?",
+    "choices": [
+      "Declarative",
+      "Versioned and immutable",
+      "Manually approved",
+      "Continuously reconciled"
+    ],
+    "correct": 2,
+    "section": "GitOps Principles",
+    "explanation": "The four GitOps principles are: declarative, versioned and immutable, pulled automatically, and continuously reconciled. Manual approval contradicts the automated nature of GitOps."
+  },
+  {
+    "question": "What makes a system 'declarative' in GitOps?",
+    "choices": [
+      "It uses manual deployment scripts",
+      "It describes the desired end state",
+      "It requires human intervention",
+      "It uses imperative commands"
+    ],
+    "correct": 1,
+    "section": "GitOps Principles",
+    "explanation": "Declarative systems define what the end state should look like rather than how to achieve it."
+  },
+  {
+    "question": "Why is immutability important in GitOps?",
+    "choices": [
+      "It ensures auditability and reliability",
+      "It prevents any system changes",
+      "It makes deployments faster",
+      "It reduces storage costs"
+    ],
+    "correct": 0,
+    "section": "GitOps Principles",
+    "explanation": "Immutability creates a reliable audit trail and ensures complete history of all system changes."
+  },
+  {
+    "question": "Which principle ensures that system changes are automatically detected and applied?",
+    "choices": [
+      "Manual approval",
+      "Version control",
+      "Declarative configuration",
+      "Continuous reconciliation"
+    ],
+    "correct": 3,
+    "section": "GitOps Principles",
+    "explanation": "Continuous reconciliation automatically detects and applies changes to ensure the actual state matches the desired state."
+  },
+  {
+    "question": "What is the benefit of using Git as the single source of truth?",
+    "choices": [
+      "Faster deployments",
+      "Complete audit trail and version history",
+      "Reduced storage costs",
+      "Simplified testing"
+    ],
+    "correct": 1,
+    "section": "GitOps Principles",
+    "explanation": "Git provides a complete history of all changes, creating a reliable audit trail and enabling rollbacks when needed."
+  },
+  {
+    "question": "Which model does GitOps prefer for applying changes?",
+    "choices": ["Push-based", "Hybrid", "Pull-based", "Manual"],
+    "correct": 2,
+    "section": "GitOps Principles",
+    "explanation": "GitOps prefers pull-based models where agents in the cluster pull changes from Git, enhancing security by not requiring external access to the cluster."
+  },
+  {
+    "question": "What happens when drift is detected in a GitOps system?",
+    "choices": [
+      "The system shuts down",
+      "An alert is generated",
+      "The system automatically reconciles the state",
+      "Manual intervention is required"
+    ],
+    "correct": 2,
+    "section": "GitOps Principles",
+    "explanation": "When drift is detected, GitOps systems automatically apply the necessary changes to align with the desired state in Git."
+  },
+  {
+    "question": "Which principle ensures that all changes are traceable?",
+    "choices": [
+      "Versioned and immutable",
+      "Continuous deployment",
+      "Declarative configuration",
+      "Automated reconciliation"
+    ],
+    "correct": 0,
+    "section": "GitOps Principles",
+    "explanation": "The versioned and immutable principle ensures all changes are recorded in Git, making them traceable and auditable."
+  },
+  {
+    "question": "What is the primary advantage of pull-based deployment?",
+    "choices": [
+      "Faster deployments",
+      "Lower resource usage",
+      "Simplified configuration",
+      "Enhanced security"
+    ],
+    "correct": 3,
+    "section": "GitOps Principles",
+    "explanation": "Pull-based deployment enhances security by eliminating the need for external systems to have direct access to the cluster."
+  },
+  {
+    "question": "Which practice supports the 'versioned and immutable' principle?",
+    "choices": [
+      "Direct cluster modifications",
+      "Using feature branches",
+      "Manual deployments",
+      "Skipping code review"
+    ],
+    "correct": 1,
+    "section": "GitOps Principles",
+    "explanation": "Feature branches support the versioned and immutable principle by preserving change history and enabling proper review workflows."
+  },
+  {
+    "question": "Which practice involves managing infrastructure through code?",
+    "choices": [
+      "Infrastructure as Code (IaC)",
+      "Configuration as Code (CaC)",
+      "Continuous Integration (CI)",
+      "Continuous Deployment (CD)"
+    ],
+    "correct": 0,
+    "section": "Related Practices",
+    "explanation": "Infrastructure as Code involves managing and provisioning infrastructure through machine-readable definition files."
+  },
+  {
+    "question": "What is the primary focus of DevSecOps?",
+    "choices": [
+      "Fast deployments",
+      "Infrastructure management",
+      "Integrated security practices",
+      "Code quality"
+    ],
+    "correct": 2,
+    "section": "Related Practices",
+    "explanation": "DevSecOps integrates security practices throughout the development and operations process rather than treating security as a separate concern."
+  },
+  {
+    "question": "Which tool is commonly used for Infrastructure as Code?",
+    "choices": ["Jenkins", "Git", "Terraform", "Docker"],
+    "correct": 2,
+    "section": "Related Practices",
+    "explanation": "Terraform is a widely used tool for defining and provisioning infrastructure through declarative configuration files."
+  },
+  {
+    "question": "What is Configuration as Code primarily used for?",
+    "choices": [
+      "Managing application settings",
+      "Building containers",
+      "Running tests",
+      "Monitoring systems"
+    ],
+    "correct": 0,
+    "section": "Related Practices",
+    "explanation": "Configuration as Code focuses on managing application settings and infrastructure configuration through version-controlled files."
+  },
+  {
+    "question": "Which practice ensures code changes are automatically tested?",
+    "choices": [
+      "Infrastructure as Code",
+      "Continuous Integration",
+      "Configuration Management",
+      "Version Control"
+    ],
+    "correct": 1,
+    "section": "Related Practices",
+    "explanation": "Continuous Integration automatically tests code changes when they are committed to the repository."
+  },
+  {
+    "question": "What is the relationship between GitOps and DevOps?",
+    "choices": [
+      "They are completely separate practices",
+      "DevOps replaces GitOps",
+      "They serve different purposes",
+      "GitOps is a subset of DevOps practices"
+    ],
+    "correct": 3,
+    "section": "Related Practices",
+    "explanation": "GitOps applies DevOps principles with a specific focus on using Git as the source of truth for operational tasks."
+  },
+  {
+    "question": "Which practice focuses on automated security testing?",
+    "choices": ["CI/CD", "DevSecOps", "IaC", "CaC"],
+    "correct": 1,
+    "section": "Related Practices",
+    "explanation": "DevSecOps emphasizes automated security testing and integrating security practices throughout the development lifecycle."
+  },
+  {
+    "question": "What is the main benefit of Configuration as Code?",
+    "choices": [
+      "Version-controlled configuration management",
+      "Faster application development",
+      "Improved security",
+      "Better performance"
+    ],
+    "correct": 0,
+    "section": "Related Practices",
+    "explanation": "Configuration as Code provides version-controlled management of configuration files, enabling tracking, rollback, and consistency."
+  },
+  {
+    "question": "Which tool is commonly used for CI/CD pipelines?",
+    "choices": ["Terraform", "Ansible", "Kubernetes", "GitHub Actions"],
+    "correct": 3,
+    "section": "Related Practices",
+    "explanation": "GitHub Actions is a popular tool for implementing CI/CD pipelines directly integrated with Git repositories."
+  },
+  {
+    "question": "What is the primary goal of continuous delivery?",
+    "choices": [
+      "Faster code writing",
+      "Better documentation",
+      "Reliable software releases",
+      "Cost reduction"
+    ],
+    "correct": 2,
+    "section": "Related Practices",
+    "explanation": "Continuous delivery focuses on making software releases reliable and predictable through automation."
+  },
+  {
+    "question": "Which deployment strategy maintains two identical environments?",
+    "choices": [
+      "Rolling update",
+      "Blue-Green deployment",
+      "Canary release",
+      "A/B testing"
+    ],
+    "correct": 1,
+    "section": "GitOps Patterns",
+    "explanation": "Blue-Green deployment maintains two identical environments, allowing immediate switching between versions for zero-downtime deployments."
+  },
+  {
+    "question": "What is the primary purpose of canary deployments?",
+    "choices": [
+      "Instant rollback capability",
+      "Zero downtime updates",
+      "Gradual risk mitigation",
+      "Feature testing"
+    ],
+    "correct": 2,
+    "section": "GitOps Patterns",
+    "explanation": "Canary deployments gradually release new versions to a subset of users, allowing for risk mitigation through early feedback."
+  },
+  {
+    "question": "Which pattern is best for testing new features with a subset of users?",
+    "choices": [
+      "Feature flags",
+      "Blue-Green deployment",
+      "Canary release",
+      "Rolling update"
+    ],
+    "correct": 0,
+    "section": "GitOps Patterns",
+    "explanation": "Feature flags enable testing features with specific user subsets by dynamically enabling or disabling functionality."
+  },
+  {
+    "question": "What is the advantage of using feature flags?",
+    "choices": [
+      "Improved security",
+      "Better performance",
+      "Simplified deployment",
+      "Runtime feature control"
+    ],
+    "correct": 3,
+    "section": "GitOps Patterns",
+    "explanation": "Feature flags provide runtime control over features, allowing them to be enabled or disabled without requiring redeployment."
+  },
+  {
+    "question": "Which deployment pattern offers the fastest rollback capability?",
+    "choices": [
+      "Blue-Green deployment",
+      "Canary release",
+      "Rolling update",
+      "A/B testing"
+    ],
+    "correct": 0,
+    "section": "GitOps Patterns",
+    "explanation": "Blue-Green deployment offers the fastest rollback capability by simply redirecting traffic back to the previous environment."
+  },
+  {
+    "question": "What is progressive delivery?",
+    "choices": [
+      "Manual deployment process",
+      "Automated deployment with gradual rollout",
+      "Direct production updates",
+      "Feature branch deployment"
+    ],
+    "correct": 1,
+    "section": "GitOps Patterns",
+    "explanation": "Progressive delivery combines automation with gradual rollout strategies, including controlled testing and verification."
+  },
+  {
+    "question": "Which pattern is best for collecting user feedback on new features?",
+    "choices": [
+      "Blue-Green deployment",
+      "Rolling update",
+      "Canary release",
+      "A/B testing"
+    ],
+    "correct": 3,
+    "section": "GitOps Patterns",
+    "explanation": "A/B testing is designed to compare different feature versions and collect user feedback to make data-driven decisions."
+  },
+  {
+    "question": "What is the primary advantage of pull-based patterns?",
+    "choices": [
+      "Faster deployments",
+      "Improved performance",
+      "Better security control",
+      "Simplified configuration"
+    ],
+    "correct": 2,
+    "section": "GitOps Patterns",
+    "explanation": "Pull-based patterns improve security by eliminating the need for external systems to have direct access to the cluster."
+  },
+  {
+    "question": "Which pattern helps prevent configuration drift?",
+    "choices": [
+      "Continuous reconciliation",
+      "Manual updates",
+      "Direct cluster access",
+      "Push-based deployment"
+    ],
+    "correct": 0,
+    "section": "GitOps Patterns",
+    "explanation": "Continuous reconciliation prevents configuration drift by constantly comparing the actual state with the desired state in Git."
+  },
+  {
+    "question": "What is the purpose of an in-cluster reconciler?",
+    "choices": [
+      "Manual deployment",
+      "Configuration storage",
+      "User authentication",
+      "Automated state reconciliation"
+    ],
+    "correct": 3,
+    "section": "GitOps Patterns",
+    "explanation": "In-cluster reconcilers automatically apply changes to ensure the cluster state matches the desired state defined in Git."
+  },
+  {
+    "question": "Which tool is specifically designed for GitOps implementations?",
+    "choices": ["Jenkins", "Docker", "Flux CD", "Terraform"],
+    "correct": 2,
+    "section": "GitOps Tooling",
+    "explanation": "Flux CD is designed specifically for GitOps implementations, automating the deployment of applications from Git repositories."
+  },
+  {
+    "question": "What is the primary purpose of Helm in GitOps?",
+    "choices": [
+      "Package management",
+      "Version control",
+      "Monitoring",
+      "Testing"
+    ],
+    "correct": 0,
+    "section": "GitOps Tooling",
+    "explanation": "Helm is primarily used for package management in Kubernetes, providing templating and versioned releases of applications."
+  },
+  {
+    "question": "Which tool provides native Kubernetes configuration management?",
+    "choices": ["Helm", "Kustomize", "Jenkins", "ArgoCD"],
+    "correct": 1,
+    "section": "GitOps Tooling",
+    "explanation": "Kustomize provides native Kubernetes configuration management through base configurations and customizable overlays."
+  },
+  {
+    "question": "What is the main function of ArgoCD?",
+    "choices": [
+      "Container building",
+      "Code testing",
+      "GitOps controller",
+      "Log management"
+    ],
+    "correct": 2,
+    "section": "GitOps Tooling",
+    "explanation": "ArgoCD functions as a GitOps controller that automates the synchronization between Git repositories and Kubernetes clusters."
+  },
+  {
+    "question": "Which format is commonly used for Kubernetes manifests?",
+    "choices": ["JSON", "XML", "YAML", "INI"],
+    "correct": 2,
+    "section": "GitOps Tooling",
+    "explanation": "YAML is the most commonly used format for Kubernetes manifests due to its readability and support for complex configurations."
+  },
+  {
+    "question": "What is the purpose of Kustomize overlays?",
+    "choices": [
+      "Environment-specific configurations",
+      "Security scanning",
+      "Performance monitoring",
+      "Version control"
+    ],
+    "correct": 0,
+    "section": "GitOps Tooling",
+    "explanation": "Kustomize overlays allow for environment-specific configurations to be applied on top of a common base configuration."
+  },
+  {
+    "question": "Which tool is best for managing Kubernetes secrets in GitOps?",
+    "choices": ["Git", "Helm", "Kustomize", "Sealed Secrets"],
+    "correct": 3,
+    "section": "GitOps Tooling",
+    "explanation": "Sealed Secrets enables the secure management of Kubernetes secrets in Git repositories by encrypting sensitive information."
+  },
+  {
+    "question": "What is the primary function of Flux CD?",
+    "choices": [
+      "GitOps automation",
+      "Code testing",
+      "Container building",
+      "Log analysis"
+    ],
+    "correct": 0,
+    "section": "GitOps Tooling",
+    "explanation": "Flux CD's primary function is GitOps automation, continuously ensuring that clusters reflect the state defined in Git."
+  },
+  {
+    "question": "Which tool provides a web UI for GitOps workflows?",
+    "choices": ["Kustomize", "ArgoCD", "Helm", "Flux CD"],
+    "correct": 1,
+    "section": "GitOps Tooling",
+    "explanation": "ArgoCD provides a comprehensive web UI for managing and visualizing GitOps workflows and application deployments."
+  },
+  {
+    "question": "What is the purpose of a GitOps notification controller?",
+    "choices": [
+      "Deployment automation",
+      "Configuration validation",
+      "Secret management",
+      "Alert management"
+    ],
+    "correct": 3,
+    "section": "GitOps Tooling",
+    "explanation": "GitOps notification controllers manage alerts related to reconciliation status, sync failures, and other GitOps-related events."
+  },
+  {
+    "question": "Which of the following is NOT a core principle of GitOps?",
+    "choices": [
+      "Declarative configuration",
+      "Versioned and immutable desired state",
+      "Manual synchronization between environments",
+      "Automated reconciliation"
+    ],
+    "correct": 2,
+    "section": "GitOps Principles",
+    "explanation": "GitOps relies on automation for synchronization (reconciliation) between the desired state (in Git) and the actual state, not manual processes."
+  },
+  {
+    "question": "Which tool is specifically designed for progressive delivery in GitOps?",
+    "choices": ["Flux", "Argo Rollouts", "Jenkins", "Terraform"],
+    "correct": 1,
+    "section": "GitOps Tooling",
+    "explanation": "Argo Rollouts is a Kubernetes controller and set of CRDs that provide advanced deployment capabilities such as blue-green, canary, and canary analysis for progressive delivery."
+  },
+  {
+    "question": "What is a key benefit of using Terraform in a GitOps workflow?",
+    "choices": [
+      "It replaces the need for Git.",
+      "It allows infrastructure to be defined as code and versioned in Git.",
+      "It automates application code testing.",
+      "It eliminates the need for CI/CD pipelines."
+    ],
+    "correct": 1,
+    "section": "Infrastructure as Code",
+    "explanation": "Terraform enables infrastructure to be defined as code, which can be versioned and managed in Git, aligning with GitOps principles."
+  },
+  {
+    "question": "How does GitOps differ from traditional CI/CD?",
+    "choices": [
+      "GitOps eliminates the need for CI pipelines.",
+      "GitOps uses Git as the single source of truth for both infrastructure and application deployments.",
+      "GitOps requires manual approval for every deployment.",
+      "GitOps only works with monolithic applications."
+    ],
+    "correct": 1,
+    "section": "CI/CD and GitOps",
+    "explanation": "GitOps extends CI/CD by using Git as the single source of truth for declarative infrastructure and application deployments, enabling automated, auditable, and reproducible processes."
+  },
+  {
+    "question": "What is a best practice for managing secrets in a GitOps workflow?",
+    "choices": [
+      "Store secrets directly in Git repositories.",
+      "Use external secret management tools like HashiCorp Vault or sealed secrets.",
+      "Share secrets via email or chat tools.",
+      "Hardcode secrets in deployment scripts."
+    ],
+    "correct": 1,
+    "section": "Security in GitOps",
+    "explanation": "Secrets should never be stored in Git. Instead, use external tools like Vault or sealed secrets to manage and inject secrets securely."
+  },
+  {
+    "question": "Why is observability important in GitOps?",
+    "choices": [
+      "To manually approve deployments.",
+      "To detect and alert on drift between desired and actual states.",
+      "To replace Git as the source of truth.",
+      "To slow down the deployment process."
+    ],
+    "correct": 1,
+    "section": "Observability and Monitoring",
+    "explanation": "Observability helps detect drift, monitor the health of deployments, and alert teams to discrepancies or issues in real time."
+  },
+  {
+    "question": "Which deployment strategy allows traffic to be gradually shifted from an old version to a new version of an application?",
+    "choices": ["Blue-Green", "Canary", "Rolling Update", "Recreate"],
+    "correct": 1,
+    "section": "Deployment Strategies",
+    "explanation": "Canary deployments incrementally shift traffic to the new version, reducing risk and allowing for monitoring before full rollout."
+  },
+  {
+    "question": "What is the role of a Kubernetes Custom Resource Definition (CRD) in GitOps?",
+    "choices": [
+      "To replace Git as the source of truth.",
+      "To extend Kubernetes API and define custom resources for GitOps tools like Argo CD or Flux.",
+      "To manually scale applications.",
+      "To store application source code."
+    ],
+    "correct": 1,
+    "section": "GitOps and Kubernetes",
+    "explanation": "CRDs allow GitOps tools to define and manage custom resources, such as applications and their desired states, within Kubernetes."
+  },
+  {
+    "question": "How does GitOps improve collaboration between development and operations teams?",
+    "choices": [
+      "By eliminating the need for operations teams.",
+      "By providing a transparent, auditable, and automated workflow centered around Git.",
+      "By requiring all changes to be approved by a single person.",
+      "By removing version control from the process."
+    ],
+    "correct": 1,
+    "section": "Collaboration and Workflow",
+    "explanation": "GitOps fosters collaboration by using Git as a shared, auditable source of truth, with automated processes for consistency and reliability."
+  },
+  {
+    "question": "How does GitOps help with compliance and audit requirements?",
+    "choices": [
+      "By hiding changes from auditors.",
+      "By providing a full audit trail of all changes in Git.",
+      "By allowing manual overrides without documentation.",
+      "By eliminating the need for documentation."
+    ],
+    "correct": 1,
+    "section": "Compliance and Audit",
+    "explanation": "GitOps ensures all changes are tracked in Git, providing a complete audit trail for compliance and review."
+  },
+  {
+    "question": "What is the first step in adopting GitOps for a new project?",
+    "choices": [
+      "Manually deploy the application to production.",
+      "Define the desired state of the infrastructure and application in Git.",
+      "Ignore version control until the project is complete.",
+      "Use only imperative commands for deployments."
+    ],
+    "correct": 1,
+    "section": "Getting Started with GitOps",
+    "explanation": "The first step is to define the desired state declaratively and store it in Git, which serves as the foundation for GitOps."
+  },
+  {
+    "question": "If a GitOps agent (e.g., Argo CD) reports a 'OutOfSync' status, what should you do?",
+    "choices": [
+      "Ignore the status and wait for it to resolve itself.",
+      "Manually apply changes to the cluster to match the desired state.",
+      "Check the Git repository for recent changes and verify the agent’s ability to reconcile the state.",
+      "Delete the Git repository and start over."
+    ],
+    "correct": 2,
+    "section": "Troubleshooting GitOps",
+    "explanation": "An 'OutOfSync' status indicates a drift between the desired state (Git) and the actual state. Investigate recent changes and ensure the agent can reconcile the state."
+  },
+  {
+    "question": "Which of the following is a core principle of GitOps?",
+    "choices": [
+      "The desired state of the system is stored in a version control system like Git.",
+      "Changes are pushed directly to production without versioning.",
+      "Manual approval is required for every deployment, regardless of the process.",
+      "The actual state of the system is never reconciled with the desired state."
+    ],
+    "correct": 0,
+    "section": "GitOps Principles",
+    "explanation": "GitOps requires that the desired state of the system be declarative, versioned, and stored in a version control system (most commonly Git). This allows for auditability, reproducibility, and automated reconciliation between the desired and actual states."
+  },
+  {
+    "question": "What is the primary purpose of using a GitOps approach in software delivery?",
+    "choices": [
+      "To eliminate the need for version control systems.",
+      "To enable faster, more reliable, and auditable deployments using Git as the single source of truth.",
+      "To replace CI/CD pipelines with manual deployment scripts.",
+      "To reduce the number of developers involved in the deployment process."
+    ],
+    "correct": 1,
+    "section": "GitOps Overview",
+    "explanation": "GitOps leverages Git as the single source of truth for declarative infrastructure and deployments, enabling faster, more reliable, and auditable software delivery."
+  },
+  {
+    "question": "Which tool is commonly used as a GitOps operator for Kubernetes?",
+    "choices": ["Jenkins", "Argo CD", "Docker Compose", "Ansible"],
+    "correct": 1,
+    "section": "GitOps Tooling",
+    "explanation": "Argo CD is a popular GitOps operator specifically designed for Kubernetes, enabling automated, Git-driven continuous delivery."
+  },
+  {
+    "question": "In GitOps, what does 'continuous reconciliation' mean?",
+    "choices": [
+      "The system periodically checks and corrects any drift between the actual and desired state.",
+      "Developers must manually approve every change before it is applied.",
+      "The desired state is only checked once per deployment cycle.",
+      "The system ignores any changes made outside of Git."
+    ],
+    "correct": 0,
+    "section": "GitOps Principles",
+    "explanation": "Continuous reconciliation means the system constantly monitors and automatically corrects any differences (drift) between the actual state of the system and the desired state defined in Git."
+  },
+  {
+    "question": "Which of the following best describes 'Infrastructure as Code' (IaC) in the context of GitOps?",
+    "choices": [
+      "Managing infrastructure using physical hardware configuration files.",
+      "Defining and managing infrastructure using machine-readable definition files stored in version control.",
+      "Using only manual processes to configure infrastructure.",
+      "Storing infrastructure secrets in plaintext within Git repositories."
+    ],
+    "correct": 1,
+    "section": "Infrastructure as Code",
+    "explanation": "Infrastructure as Code (IaC) involves managing infrastructure through machine-readable definition files, which are typically stored in version control systems like Git."
+  },
+  {
+    "question": "What is the role of a 'GitOps agent' in a GitOps workflow?",
+    "choices": [
+      "To manually approve pull requests in Git.",
+      "To continuously monitor the Git repository and apply changes to the target environment.",
+      "To replace the need for a Git repository.",
+      "To generate random infrastructure configurations."
+    ],
+    "correct": 1,
+    "section": "GitOps Workflow",
+    "explanation": "A GitOps agent (such as Argo CD or Flux) continuously monitors the Git repository for changes and automatically applies those changes to the target environment, ensuring the actual state matches the desired state."
+  }
+]

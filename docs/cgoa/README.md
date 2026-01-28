@@ -52,6 +52,11 @@ The **Certified GitOps Associate (CGOA)** exam demonstrates knowledge of GitOps 
 - [Flux Documentation](https://fluxcd.io/docs/)
 - [Argo CD Documentation](https://argo-cd.readthedocs.io/)
 
+## Practice & Preparation
+
+- **[🎯 Take the Demo Exam](./demo-exam.md)** - Interactive practice exam with 68 questions
+- [Sample Questions](./sample-questions.md) - Study guide with detailed explanations
+
 ## Navigation
 
-- [Next: Sample Questions →](./sample-questions.md)
+- [Next: GitOps Principles →](./01-gitops-principles.md)

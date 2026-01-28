@@ -36,11 +36,13 @@ theme:
     - css/cert-cost-calculator.css
     - css/theme-persistence.css
     - css/theme-variants.css
+    - css/cgoa-exam.css
   extra_javascript:
     - js/cert-cost-calculator.js
     - js/theme-persistence.js
     - js/theme-analytics.js
     - js/advanced-theme-manager.js
+    - js/cgoa-exam.js
 
 plugins:
   - search
@@ -176,6 +178,7 @@ nav:
       - Overview: cgoa/README.md
       - GitOps Principles: cgoa/01-gitops-principles.md
       - Sample Practice Questions: cgoa/sample-questions.md
+      - Demo Exam: cgoa/demo-exam.md
     - CBA:
       - Overview: cba/README.md
       - Sample Practice Questions: cba/sample-questions.md
