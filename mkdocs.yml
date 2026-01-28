@@ -35,9 +35,12 @@ theme:
   extra_css:
     - css/cert-cost-calculator.css
     - css/theme-persistence.css
+    - css/theme-variants.css
   extra_javascript:
     - js/cert-cost-calculator.js
     - js/theme-persistence.js
+    - js/theme-analytics.js
+    - js/advanced-theme-manager.js
 
 plugins:
   - search
