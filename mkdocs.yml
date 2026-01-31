@@ -36,13 +36,12 @@ theme:
     - css/cert-cost-calculator.css
     - css/theme-persistence.css
     - css/theme-variants.css
-    - css/cgoa-exam.css
+    - css/cert-exam.css
   extra_javascript:
     - js/cert-cost-calculator.js
     - js/theme-persistence.js
     - js/theme-analytics.js
     - js/advanced-theme-manager.js
-    - js/cgoa-exam.js
 
 plugins:
   - search
@@ -174,6 +173,7 @@ nav:
       - Overview: capa/README.md
       - Argo CD Fundamentals: capa/01-argocd-fundamentals.md
       - Sample Practice Questions: capa/sample-questions.md
+      - Demo Exam: capa/demo-exam.md
     - CGOA:
       - Overview: cgoa/README.md
       - GitOps Principles: cgoa/01-gitops-principles.md
