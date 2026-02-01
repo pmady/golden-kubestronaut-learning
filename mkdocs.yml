@@ -194,6 +194,7 @@ nav:
       - Overview: kca/README.md
       - Kyverno Fundamentals: kca/01-kyverno-fundamentals.md
       - Sample Practice Questions: kca/sample-questions.md
+      - Demo Exam: kca/demo-exam.md
     - CNPA:
       - Overview: cnpa/README.md
       - Sample Practice Questions: cnpa/sample-questions.md
