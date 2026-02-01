@@ -1,9 +1,9 @@
 /**
- * CGOA Demo Exam - Interactive Quiz Application
+ * CNPA Demo Exam - Interactive Quiz Application
  * Loads questions from JSON and provides an interactive exam experience
  */
 
-class CGOAExam {
+class CNPAExam {
   constructor() {
     this.questions = [];
     this.currentQuestionIndex = 0;
@@ -11,9 +11,6 @@ class CGOAExam {
     this.examStartTime = null;
     this.examEndTime = null;
     this.examMode = 'practice'; // 'practice' or 'exam'
-    this.timerInterval = null;
-    this.timeRemaining = 0; // in seconds
-    this.timerEnabled = false;
     this.init();
   }
 
@@ -32,7 +29,7 @@ class CGOAExam {
     const basePath = window.location.pathname.includes('/golden-kubestronaut-learning/') 
       ? '/golden-kubestronaut-learning' 
       : '';
-    const response = await fetch(`${basePath}/data/cgoa-questions.json`);
+    const response = await fetch(`${basePath}/data/cnpa-questions.json`);
     if (!response.ok) {
       throw new Error('Failed to fetch questions');
     }
@@ -41,9 +38,7 @@ class CGOAExam {
   }
 
   renderExamStart() {
-    this.stopTimer();
     const container = document.getElementById('exam-container');
-    const recommendedTime = Math.ceil(this.questions.length * 1.5);
     container.innerHTML = `
       <div class="exam-start">
         <h2>🎯 Ready to Start?</h2>
@@ -57,28 +52,23 @@ class CGOAExam {
             <div class="stat-label">Topic Areas</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">~${recommendedTime}</div>
-            <div class="stat-label">Recommended Minutes</div>
+            <div class="stat-number">~${Math.ceil(this.questions.length * 1.5)}</div>
+            <div class="stat-label">Minutes</div>
           </div>
         </div>
         
         <div class="exam-mode-selection">
           <h3>Choose Your Mode:</h3>
           <div class="mode-options">
-            <button class="mode-btn" onclick="exam.startExam('practice', false)">
+            <button class="mode-btn" onclick="exam.startExam('practice')">
               <span class="mode-icon">📚</span>
               <span class="mode-title">Practice Mode</span>
               <span class="mode-desc">See explanations after each question</span>
             </button>
-            <button class="mode-btn" onclick="exam.startExam('exam', false)">
+            <button class="mode-btn" onclick="exam.startExam('exam')">
               <span class="mode-icon">🎓</span>
               <span class="mode-title">Exam Mode</span>
               <span class="mode-desc">Simulate the real exam experience</span>
-            </button>
-            <button class="mode-btn" onclick="exam.startExam('exam', true)">
-              <span class="mode-icon">⏱️</span>
-              <span class="mode-title">Timed Exam Mode</span>
-              <span class="mode-desc">With ${recommendedTime}-minute countdown timer</span>
             </button>
           </div>
         </div>
@@ -95,19 +85,11 @@ class CGOAExam {
     `;
   }
 
-  startExam(mode, enableTimer = false) {
+  startExam(mode) {
     this.examMode = mode;
     this.examStartTime = new Date();
     this.currentQuestionIndex = 0;
     this.userAnswers = new Array(this.questions.length).fill(null);
-    this.timerEnabled = enableTimer;
-    
-    if (enableTimer) {
-      // Set timer to recommended time (1.5 minutes per question)
-      this.timeRemaining = Math.ceil(this.questions.length * 1.5) * 60; // convert to seconds
-      this.startTimer();
-    }
-    
     this.renderQuestion();
   }
 
@@ -115,24 +97,16 @@ class CGOAExam {
     const container = document.getElementById('exam-container');
     const question = this.questions[this.currentQuestionIndex];
     const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
-    const answeredCount = this.userAnswers.filter(a => a !== null).length;
 
     container.innerHTML = `
       <div class="exam-question">
         <div class="exam-header">
-          ${this.timerEnabled ? `
-            <div class="timer-display" id="timer-display">
-              <span class="timer-icon">⏱️</span>
-              <span class="timer-text" id="timer-text">Loading...</span>
-            </div>
-          ` : ''}
           <div class="progress-bar">
             <div class="progress-fill" style="width: ${progress}%"></div>
           </div>
           <div class="exam-info">
             <span class="question-number">Question ${this.currentQuestionIndex + 1} of ${this.questions.length}</span>
             <span class="question-section">${question.section}</span>
-            <span class="answered-count">Answered: ${answeredCount}/${this.questions.length}</span>
           </div>
         </div>
 
@@ -193,7 +167,6 @@ class CGOAExam {
     if (this.examMode === 'practice') {
       this.showExplanation();
     } else {
-      // In exam mode, just update the UI
       this.renderQuestion();
     }
   }
@@ -283,65 +256,13 @@ class CGOAExam {
     this.renderQuestion();
   }
 
-  startTimer() {
-    this.updateTimerDisplay();
-    this.timerInterval = setInterval(() => {
-      this.timeRemaining--;
-      this.updateTimerDisplay();
-      
-      if (this.timeRemaining <= 0) {
-        this.stopTimer();
-        alert('⏰ Time is up! Your exam will be submitted automatically.');
-        this.submitExam(true);
-      }
-    }, 1000);
-  }
-
-  stopTimer() {
-    if (this.timerInterval) {
-      clearInterval(this.timerInterval);
-      this.timerInterval = null;
-    }
-  }
-
-  updateTimerDisplay() {
-    const timerText = document.getElementById('timer-text');
-    if (timerText) {
-      const formatted = this.formatTime(this.timeRemaining);
-      timerText.textContent = formatted;
-      
-      // Change color when time is running low
-      const timerDisplay = document.getElementById('timer-display');
-      if (timerDisplay) {
-        if (this.timeRemaining <= 300) { // 5 minutes
-          timerDisplay.classList.add('timer-warning');
-        }
-        if (this.timeRemaining <= 60) { // 1 minute
-          timerDisplay.classList.add('timer-critical');
-        }
-      }
-    }
-  }
-
-  formatTime(seconds) {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
-    
-    if (hours > 0) {
-      return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    }
-    return `${minutes}:${secs.toString().padStart(2, '0')}`;
-  }
-
-  submitExam(autoSubmit = false) {
+  submitExam() {
     const unanswered = this.userAnswers.filter(a => a === null).length;
     
-    if (!autoSubmit && unanswered > 0 && !confirm(`You have ${unanswered} unanswered questions. Submit anyway?`)) {
+    if (unanswered > 0 && !confirm(`You have ${unanswered} unanswered questions. Submit anyway?`)) {
       return;
     }
 
-    this.stopTimer();
     this.examEndTime = new Date();
     this.showResults();
   }
@@ -556,5 +477,5 @@ class CGOAExam {
 // Initialize exam when page loads
 let exam;
 document.addEventListener('DOMContentLoaded', () => {
-  exam = new CGOAExam();
+  exam = new CNPAExam();
 });

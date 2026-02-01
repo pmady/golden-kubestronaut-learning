@@ -1,0 +1,380 @@
+[
+  {
+    "question": "Which of the following best describes an Argo Workflow?",
+    "choices": [
+      "A continuous delivery tool for Kubernetes",
+      "A container-native workflow engine for orchestrating parallel jobs",
+      "A progressive delivery controller",
+      "An event-driven automation framework"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "Argo Workflows is a container-native workflow engine for orchestrating parallel jobs on Kubernetes."
+  },
+  {
+    "question": "In an Argo Workflow template, what is the purpose of the outputs section?",
+    "choices": [
+      "To define the workflow's exit conditions",
+      "To specify the artifacts produced by the template",
+      "To configure output logging",
+      "To set environment variables"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "The outputs section lists artifacts produced by the template which can be consumed by later steps."
+  },
+  {
+    "question": "How do you specify that a workflow step should only execute if a previous step failed?",
+    "choices": [
+      "Using when: \"{{workflow.status}} == Failed\"",
+      "Using when: \"{{steps.STEPNAME.status}} == Failed\"",
+      "Using if: failed",
+      "Using condition: failed"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "You reference a prior step's status via steps.<name>.status inside a when expression."
+  },
+  {
+    "question": "Which Argo Workflows feature allows you to share common workflow steps across multiple workflows?",
+    "choices": [
+      "Templates",
+      "WorkflowTemplates",
+      "SharedSteps",
+      "CommonWorkflows"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "WorkflowTemplates are reusable definitions that can be referenced by multiple Workflow CRs."
+  },
+  {
+    "question": "What is the correct way to reference an input parameter in an Argo Workflow template?",
+    "choices": [
+      "$(inputs.parameters.PARAM_NAME)",
+      "{{inputs.parameters.PARAM_NAME}}",
+      "${inputs.parameters.PARAM_NAME}",
+      "%inputs.parameters.PARAM_NAME%"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "Parameters are substituted with the double-brace expression syntax."
+  },
+  {
+    "question": "How do you specify a workflow should retry failed steps?",
+    "choices": [
+      "Using retryStrategy in the workflow spec",
+      "Using retry in each step",
+      "Using onFailure: retry",
+      "Using failurePolicy: Retry"
+    ],
+    "correct": 0,
+    "section": "Argo Workflows",
+    "explanation": "Global or template-level retry behavior is configured with retryStrategy."
+  },
+  {
+    "question": "Which command shows the logs of a specific workflow step?",
+    "choices": [
+      "argo logs <workflow-name>",
+      "argo logs <workflow-name> -f",
+      "argo logs <workflow-name> <pod-name>",
+      "argo logs <workflow-name> --step=<step-name>"
+    ],
+    "correct": 3,
+    "section": "Argo Workflows",
+    "explanation": "The --step flag targets a specific step's pod logs."
+  },
+  {
+    "question": "What is the purpose of the archiveLogs field in a workflow spec?",
+    "choices": [
+      "To save logs to a persistent volume",
+      "To enable log aggregation",
+      "To save logs as an artifact",
+      "To compress log files"
+    ],
+    "correct": 2,
+    "section": "Argo Workflows",
+    "explanation": "archiveLogs causes logs to be stored as artifacts for later retrieval."
+  },
+  {
+    "question": "Which of the following artifact types is NOT supported by Argo Workflows?",
+    "choices": ["S3", "Git", "Artifactory", "MongoDB"],
+    "correct": 3,
+    "section": "Argo Workflows",
+    "explanation": "MongoDB is not a supported artifact repository type; S3, Git, Artifactory are."
+  },
+  {
+    "question": "What is the correct way to specify a workflow should run with a specific service account?",
+    "choices": [
+      "Using spec.serviceAccount",
+      "Using spec.serviceAccountName",
+      "Using metadata.serviceAccount",
+      "Using metadata.serviceAccountName"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "The Workflow spec field serviceAccountName selects the service account."
+  },
+  {
+    "question": "Which feature allows you to suspend a workflow at a specific step?",
+    "choices": [
+      "Using suspend: true in the step",
+      "Using a suspend template",
+      "Using wait: true",
+      "Using pause: true"
+    ],
+    "correct": 1,
+    "section": "Argo Workflows",
+    "explanation": "A template of type suspend halts execution until resumed manually."
+  },
+  {
+    "question": "How do you specify a global timeout for an entire workflow?",
+    "choices": [
+      "Using spec.timeout",
+      "Using metadata.timeout",
+      "Using spec.activeDeadlineSeconds",
+      "Using spec.deadline"
+    ],
+    "correct": 2,
+    "section": "Argo Workflows",
+    "explanation": "activeDeadlineSeconds limits total workflow runtime."
+  },
+  {
+    "question": "Which component in Argo CD is responsible for maintaining the Git repository cache?",
+    "choices": [
+      "API Server",
+      "Repository Server",
+      "Application Controller",
+      "Dex Server"
+    ],
+    "correct": 1,
+    "section": "Argo CD",
+    "explanation": "Repository Server handles manifest generation and caching of Git data."
+  },
+  {
+    "question": "Which command shows the sync status of all applications?",
+    "choices": [
+      "argocd app list",
+      "argocd status",
+      "argocd get applications",
+      "argocd app status"
+    ],
+    "correct": 0,
+    "section": "Argo CD",
+    "explanation": "argocd app list displays each application's sync and health."
+  },
+  {
+    "question": "What is the purpose of the argocd-cm ConfigMap?",
+    "choices": [
+      "To store user credentials",
+      "To configure Argo CD settings",
+      "To store application definitions",
+      "To manage RBAC policies"
+    ],
+    "correct": 1,
+    "section": "Argo CD",
+    "explanation": "argocd-cm contains core Argo CD configuration including repos & settings."
+  },
+  {
+    "question": "Which Argo CD feature allows you to manage applications across multiple clusters?",
+    "choices": [
+      "Cluster management",
+      "Multi-cluster sync",
+      "Cluster registry",
+      "Application Sets"
+    ],
+    "correct": 3,
+    "section": "Argo CD",
+    "explanation": "ApplicationSet can template apps targeting multiple clusters."
+  },
+  {
+    "question": "Which of the following is NOT a valid sync option in Argo CD?",
+    "choices": ["CreateNamespace", "PruneLast", "ForceSync", "AutoHeal"],
+    "correct": 3,
+    "section": "Argo CD",
+    "explanation": "AutoHeal is not a sync option; self-heal is part of automated sync settings."
+  },
+  {
+    "question": "How do you enable SSO with GitHub in Argo CD?",
+    "choices": [
+      "Configure GitHub connector in Dex",
+      "Use GitHub OAuth directly",
+      "Enable GitHub integration",
+      "Configure GitHub OIDC"
+    ],
+    "correct": 0,
+    "section": "Argo CD",
+    "explanation": "Dex connectors integrate GitHub for SSO."
+  },
+  {
+    "question": "What is the purpose of the Application Health status in Argo CD?",
+    "choices": [
+      "To show Git repository status",
+      "To indicate sync status",
+      "To show resource operational status",
+      "To display cluster health"
+    ],
+    "correct": 2,
+    "section": "Argo CD",
+    "explanation": "Health reflects live Kubernetes resource status (Healthy/Degraded/etc)."
+  },
+  {
+    "question": "Which command syncs an application and skips hooks?",
+    "choices": [
+      "argocd app sync --no-hooks",
+      "argocd app sync --skip-hooks",
+      "argocd app sync --force",
+      "argocd app sync --ignore-hooks"
+    ],
+    "correct": 0,
+    "section": "Argo CD",
+    "explanation": "--no-hooks prevents execution of hook resources during sync."
+  },
+  {
+    "question": "What is the default port for the Argo CD API server?",
+    "choices": ["8080", "443", "8443", "80"],
+    "correct": 2,
+    "section": "Argo CD",
+    "explanation": "Argo CD server defaults to HTTPS on 8443."
+  },
+  {
+    "question": "How do you configure Helm value overrides in an Argo CD Application?",
+    "choices": [
+      "Using spec.source.helm.values",
+      "Using spec.helm.parameters",
+      "Using spec.source.helm.parameters",
+      "Using spec.helmValues"
+    ],
+    "correct": 0,
+    "section": "Argo CD",
+    "explanation": "Helm values overrides reside in spec.source.helm.values."
+  },
+  {
+    "question": "Which feature allows Argo CD to automatically detect and deploy applications?",
+    "choices": [
+      "Auto-discovery",
+      "App of Apps pattern",
+      "ApplicationSet",
+      "Auto-sync"
+    ],
+    "correct": 2,
+    "section": "Argo CD",
+    "explanation": "ApplicationSet uses generators to discover targets and create Applications."
+  },
+  {
+    "question": "What is the purpose of the 'argocd-server' service account?",
+    "choices": [
+      "To run the API server",
+      "To manage cluster access",
+      "To execute sync operations",
+      "To handle authentication"
+    ],
+    "correct": 0,
+    "section": "Argo CD",
+    "explanation": "argocd-server SA is used by the API server pod."
+  },
+  {
+    "question": "Which feature in Argo Rollouts allows gradual traffic shifting to a new version?",
+    "choices": [
+      "Progressive delivery",
+      "Canary deployment",
+      "Blue-Green deployment",
+      "Rolling update"
+    ],
+    "correct": 1,
+    "section": "Argo Rollouts",
+    "explanation": "Canary strategy incrementally shifts traffic to the new version."
+  },
+  {
+    "question": "Which Argo Rollouts feature allows automated promotion based on metrics?",
+    "choices": [
+      "Metric analysis",
+      "Analysis templates",
+      "Automated analysis",
+      "Promotion rules"
+    ],
+    "correct": 1,
+    "section": "Argo Rollouts",
+    "explanation": "AnalysisTemplate defines metrics & success thresholds enabling automation."
+  },
+  {
+    "question": "What is the purpose of the autoPromotionEnabled field in a blue-green deployment?",
+    "choices": [
+      "To automatically scale the deployment",
+      "To automatically promote the preview service to active",
+      "To enable automatic rollbacks",
+      "To enable progressive delivery"
+    ],
+    "correct": 1,
+    "section": "Argo Rollouts",
+    "explanation": "autoPromotionEnabled triggers automatic promotion without manual command."
+  },
+  {
+    "question": "Which command shows the status of a rollout?",
+    "choices": [
+      "kubectl argo rollouts get rollout",
+      "kubectl-argo-rollouts get rollout",
+      "argo rollouts status",
+      "kubectl get rollout"
+    ],
+    "correct": 1,
+    "section": "Argo Rollouts",
+    "explanation": "kubectl-argo-rollouts get rollout <name> shows rollout status via plugin."
+  },
+  {
+    "question": "What is the purpose of an AnalysisTemplate in Argo Rollouts?",
+    "choices": [
+      "To analyze deployment logs",
+      "To define metric queries and thresholds",
+      "To analyze resource usage",
+      "To monitor service health"
+    ],
+    "correct": 1,
+    "section": "Argo Rollouts",
+    "explanation": "AnalysisTemplate resources hold metric provider queries and success/failure conditions."
+  },
+  {
+    "question": "Which field specifies the maximum time for an analysis run?",
+    "choices": ["maxDuration", "timeout", "analysisTimeout", "duration"],
+    "correct": 0,
+    "section": "Argo Rollouts",
+    "explanation": "maxDuration limits how long an AnalysisRun may execute."
+  },
+  {
+    "question": "What is the primary purpose of Argo Events?",
+    "choices": [
+      "To manage Kubernetes events",
+      "To provide event-driven automation",
+      "To monitor cluster events",
+      "To log application events"
+    ],
+    "correct": 1,
+    "section": "Argo Events",
+    "explanation": "Argo Events enables event-driven automation by wiring sources to actions."
+  },
+  {
+    "question": "Which component in Argo Events receives events from event sources?",
+    "choices": ["Event Bus", "Sensor", "Gateway", "Controller"],
+    "correct": 1,
+    "section": "Argo Events",
+    "explanation": "Sensors subscribe to event sources and trigger actions based on events."
+  },
+  {
+    "question": "Which of the following is NOT a supported event source in Argo Events?",
+    "choices": ["Webhook", "Calendar", "Kafka", "GraphQL"],
+    "correct": 3,
+    "section": "Argo Events",
+    "explanation": "GraphQL is not listed as a built-in event source; webhook, calendar, Kafka are supported."
+  },
+  {
+    "question": "What is the purpose of a Sensor in Argo Events?",
+    "choices": [
+      "To generate events",
+      "To process and trigger actions based on events",
+      "To store event data",
+      "To monitor event sources"
+    ],
+    "correct": 1,
+    "section": "Argo Events",
+    "explanation": "Sensors define triggers reacting to received events to launch workflows or other actions."
+  }
+]

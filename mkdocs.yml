@@ -36,13 +36,12 @@ theme:
     - css/cert-cost-calculator.css
     - css/theme-persistence.css
     - css/theme-variants.css
-    - css/cgoa-exam.css
+    - css/cert-exam.css
   extra_javascript:
     - js/cert-cost-calculator.js
     - js/theme-persistence.js
     - js/theme-analytics.js
     - js/advanced-theme-manager.js
-    - js/cgoa-exam.js
 
 plugins:
   - search
@@ -154,6 +153,7 @@ nav:
       - Instrumentation and Exporters: pca/04-instrumentation-exporters.md
       - Alerting & Dashboarding: pca/05-alerting-dashboarding.md
       - Sample Practice Questions: pca/sample-questions.md
+      - Demo Exam: pca/demo-exam.md
     - CNPE:
       - Overview: cnpe/README.md
       - Platform Engineering: cnpe/01-platform-engineering.md
@@ -170,10 +170,12 @@ nav:
       - Overview: cca/README.md
       - Cilium Architecture: cca/01-cilium-architecture.md
       - Sample Practice Questions: cca/sample-questions.md
+      - Demo Exam: cca/demo-exam.md
     - CAPA:
       - Overview: capa/README.md
       - Argo CD Fundamentals: capa/01-argocd-fundamentals.md
       - Sample Practice Questions: capa/sample-questions.md
+      - Demo Exam: capa/demo-exam.md
     - CGOA:
       - Overview: cgoa/README.md
       - GitOps Principles: cgoa/01-gitops-principles.md
@@ -182,17 +184,21 @@ nav:
     - CBA:
       - Overview: cba/README.md
       - Sample Practice Questions: cba/sample-questions.md
+      - Demo Exam: cba/demo-exam.md
     - OTCA:
       - Overview: otca/README.md
       - OpenTelemetry Fundamentals: otca/01-opentelemetry-fundamentals.md
       - Sample Practice Questions: otca/sample-questions.md
+      - Demo Exam: otca/demo-exam.md
     - KCA:
       - Overview: kca/README.md
       - Kyverno Fundamentals: kca/01-kyverno-fundamentals.md
       - Sample Practice Questions: kca/sample-questions.md
+      - Demo Exam: kca/demo-exam.md
     - CNPA:
       - Overview: cnpa/README.md
       - Sample Practice Questions: cnpa/sample-questions.md
+      - Demo Exam: cnpa/demo-exam.md
 
 extra:
   social:

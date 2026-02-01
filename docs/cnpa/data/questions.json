@@ -1,0 +1,462 @@
+[
+  {
+    "question": "Which of the following best describes declarative resource management?",
+    "choices": [
+      "Writing scripts that execute step-by-step instructions to configure infrastructure",
+      "Defining desired system state and allowing automation to reconcile it",
+      "Manually configuring systems via CLI tools",
+      "Using configuration files for CI/CD pipelines only"
+    ],
+    "correct": 1,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Declarative management focuses on defining the desired end state, letting the system reconcile the actual state automatically — a key Kubernetes and infrastructure-as-code principle."
+  },
+  {
+    "question": "What is the primary goal of a platform engineering team?",
+    "choices": [
+      "Deliver applications directly to production",
+      "Build developer-focused platforms that abstract infrastructure complexity",
+      "Replace DevOps and SRE functions entirely",
+      "Focus solely on Kubernetes maintenance"
+    ],
+    "correct": 1,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Platform engineering aims to provide internal platforms that simplify and automate infrastructure for developers, not to replace DevOps or SRE."
+  },
+  {
+    "question": "In a DevOps-enabled platform engineering model, which statement is most accurate?",
+    "choices": [
+      "Developers own all infrastructure configuration",
+      "The platform provides self-service capabilities and guardrails",
+      "Platform teams manually approve deployments",
+      "CI/CD pipelines are optional for mature teams"
+    ],
+    "correct": 1,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Platform teams create self-service capabilities with built-in governance to empower developers while maintaining standards."
+  },
+  {
+    "question": "What is the key principle that differentiates GitOps from traditional continuous delivery?",
+    "choices": [
+      "Deployment pipelines execute from Jenkins directly",
+      "Git serves as the single source of truth for both app and infra state",
+      "All changes are applied manually via kubectl",
+      "Observability tools handle deployment rollouts"
+    ],
+    "correct": 1,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "In GitOps, the entire desired system state is stored in Git, and automation ensures the cluster matches that state."
+  },
+  {
+    "question": "What is the primary purpose of using traces, metrics, and logs together?",
+    "choices": [
+      "They all measure CPU usage",
+      "To provide a holistic view of system health and performance",
+      "To reduce monitoring costs",
+      "To secure workloads"
+    ],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Traces, metrics, and logs together provide observability into system behavior and performance, helping engineers diagnose and prevent issues."
+  },
+  {
+    "question": "In Kubernetes, which mechanism ensures secure service-to-service communication?",
+    "choices": [
+      "Pod labels",
+      "Service Accounts",
+      "Mutual TLS (mTLS)",
+      "ConfigMaps"
+    ],
+    "correct": 2,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Mutual TLS (mTLS) provides encrypted and authenticated service-to-service communication, often managed via service mesh."
+  },
+  {
+    "question": "Which tool or concept enforces policy-based governance in Kubernetes clusters?",
+    "choices": [
+      "Prometheus",
+      "Kyverno or Open Policy Agent (OPA)",
+      "Helm",
+      "Tekton"
+    ],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Policy engines like OPA and Kyverno enforce security and configuration policies dynamically across clusters."
+  },
+  {
+    "question": "You need to prevent deployments from running containers as root. What is the most effective way to enforce this across clusters?",
+    "choices": [
+      "Manual code reviews",
+      "Admission control policies via OPA",
+      "Disabling root in the Dockerfile only",
+      "Using a linter tool in CI"
+    ],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Admission controllers using OPA or Kyverno enforce runtime security rules before resources are admitted into the cluster."
+  },
+  {
+    "question": "What best describes the relationship between Continuous Integration (CI) and Continuous Delivery (CD)?",
+    "choices": [
+      "CI is about integration; CD is about delivering integrated code automatically",
+      "CI focuses on operations; CD focuses on code merges",
+      "CI/CD are the same process",
+      "CD happens before CI"
+    ],
+    "correct": 0,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "CI ensures new code integrates and passes tests, while CD automates deployment of that integrated code to environments."
+  },
+  {
+    "question": "Which GitOps workflow is most common for deploying to Kubernetes?",
+    "choices": [
+      "Pull-based reconciliation using an operator like ArgoCD",
+      "Push-based CI triggers via Jenkins",
+      "Manual kubectl apply",
+      "Using Docker Compose for sync"
+    ],
+    "correct": 0,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "Most GitOps implementations use pull-based reconciliation, where tools like ArgoCD watch Git repositories and sync changes automatically."
+  },
+  {
+    "question": "An application deploy failed due to misconfigured environment variables. How should a platform engineer approach incident response?",
+    "choices": [
+      "Roll back to the previous Git commit automatically",
+      "Delete the namespace and redeploy",
+      "Disable the pipeline",
+      "Re-run the same deployment"
+    ],
+    "correct": 0,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "GitOps enables safe rollbacks by reverting to a previous commit that represented a known good state."
+  },
+  {
+    "question": "What is the Kubernetes reconciliation loop responsible for?",
+    "choices": [
+      "Updating logs in Prometheus",
+      "Continuously ensuring actual system state matches desired state",
+      "Creating namespaces automatically",
+      "Monitoring container runtime metrics"
+    ],
+    "correct": 1,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "The reconciliation loop is a Kubernetes control pattern that continually drives the system toward the desired state declared in manifests."
+  },
+  {
+    "question": "What is a Custom Resource Definition (CRD) used for?",
+    "choices": [
+      "Managing default Kubernetes resources",
+      "Extending Kubernetes API with custom types",
+      "Controlling Pod scheduling",
+      "Scaling applications automatically"
+    ],
+    "correct": 1,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "CRDs let you define new API resource types, allowing custom controllers to manage them like native Kubernetes objects."
+  },
+  {
+    "question": "You’re integrating a new provisioning workflow using Kubernetes operators. What’s the main benefit of this pattern?",
+    "choices": [
+      "It replaces Terraform entirely",
+      "Enables automation by codifying operational knowledge into controllers",
+      "Simplifies logging and monitoring",
+      "Reduces Kubernetes API latency"
+    ],
+    "correct": 1,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "The Operator pattern encodes domain-specific operations into Kubernetes-native automation, improving reliability and consistency."
+  },
+  {
+    "question": "What is the primary goal of an Internal Developer Platform (IDP)?",
+    "choices": [
+      "Centralize all developer repositories",
+      "Provide self-service tools to improve developer productivity",
+      "Replace cloud infrastructure providers",
+      "Manage network routing and DNS"
+    ],
+    "correct": 1,
+    "section": "IDPs and Developer Experience",
+    "explanation": "IDPs abstract complexity and allow developers to deploy and manage applications independently with built-in safety and consistency."
+  },
+  {
+    "question": "Which of the following enhances adoption of a platform internally?",
+    "choices": [
+      "Developer portal with service catalog and templates",
+      "Restricting access to platform capabilities",
+      "Manual request forms for resource provisioning",
+      "Limiting observability access"
+    ],
+    "correct": 0,
+    "section": "IDPs and Developer Experience",
+    "explanation": "Developer portals improve discoverability and ease of use, encouraging adoption of platform capabilities."
+  },
+  {
+    "question": "How can AI/ML assist in platform automation?",
+    "choices": [
+      "Predicting build failures and optimizing resource provisioning",
+      "Replacing all engineers",
+      "Running manual approvals automatically",
+      "Disabling unused services randomly"
+    ],
+    "correct": 0,
+    "section": "IDPs and Developer Experience",
+    "explanation": "AI/ML can enhance platform automation by analyzing trends, predicting failures, and optimizing scaling decisions."
+  },
+  {
+    "question": "Which DORA metric directly measures delivery speed?",
+    "choices": [
+      "Change Failure Rate",
+      "Deployment Frequency",
+      "Mean Time to Detect (MTTD)",
+      "Code Coverage"
+    ],
+    "correct": 1,
+    "section": "Measuring Your Platform",
+    "explanation": "Deployment Frequency measures how often changes are successfully deployed to production, reflecting delivery velocity."
+  },
+  {
+    "question": "A platform team wants to show leadership how its work improves developer experience. Which metric best aligns with that goal?",
+    "choices": [
+      "Mean Time to Recovery (MTTR)",
+      "Platform adoption rate and self-service deployment frequency",
+      "CPU utilization",
+      "Total lines of code"
+    ],
+    "correct": 1,
+    "section": "Measuring Your Platform",
+    "explanation": "Metrics that show platform usage and developer autonomy best illustrate improvements in developer experience."
+  },
+  {
+    "question": "Platform efficiency should be measured primarily in terms of:",
+    "choices": [
+      "Total number of platform engineers",
+      "Developer productivity and infrastructure utilization",
+      "Number of scripts written",
+      "Size of the Kubernetes cluster"
+    ],
+    "correct": 1,
+    "section": "Measuring Your Platform",
+    "explanation": "Platform efficiency is about maximizing developer productivity and resource efficiency, not headcount or cluster size."
+  },
+  {
+    "question": "What is the main benefit of using Infrastructure as Code (IaC) in platform engineering?",
+    "choices": [
+      "Faster manual deployments",
+      "Repeatable, version-controlled infrastructure provisioning",
+      "Easier to change resources directly in production",
+      "Less dependency on CI/CD pipelines"
+    ],
+    "correct": 1,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "IaC enables consistent, automated, and version-controlled provisioning, which is essential for reliable platform engineering."
+  },
+  {
+    "question": "Which of the following is NOT a core goal of platform engineering?",
+    "choices": [
+      "Reducing developer cognitive load",
+      "Standardizing environments and tooling",
+      "Providing self-service automation",
+      "Manually approving every deployment"
+    ],
+    "correct": 3,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Manual approvals add friction. Platform engineering emphasizes automation and self-service with safe guardrails."
+  },
+  {
+    "question": "Which tool is most commonly used to define declarative infrastructure in Kubernetes environments?",
+    "choices": ["Terraform", "Helm", "Bash", "Docker Compose"],
+    "correct": 0,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Terraform is a widely used declarative IaC tool for managing cloud and Kubernetes resources."
+  },
+  {
+    "question": "A team wants to automate test execution and image building upon every commit. Which practice supports this goal?",
+    "choices": [
+      "Continuous Integration",
+      "Continuous Delivery",
+      "Incident Response",
+      "GitOps"
+    ],
+    "correct": 0,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "Continuous Integration automates testing and building after each commit to maintain code quality."
+  },
+  {
+    "question": "Which Kubernetes concept best represents declarative desired state management?",
+    "choices": [
+      "Kubelet Logs",
+      "Control Plane",
+      "Reconciliation Loop",
+      "Pod Autoscaler"
+    ],
+    "correct": 2,
+    "section": "Platform Engineering Core Fundamentals",
+    "explanation": "The reconciliation loop continuously ensures actual cluster state matches the desired state defined in manifests."
+  },
+  {
+    "question": "Which observability signal best helps identify latency between services?",
+    "choices": ["Metrics", "Traces", "Logs", "Events"],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Traces track the journey of requests across services, helping pinpoint latency or bottlenecks."
+  },
+  {
+    "question": "What is the purpose of a Service Mesh in platform architecture?",
+    "choices": [
+      "Manage persistent volumes",
+      "Secure and observe service-to-service communication",
+      "Build container images",
+      "Schedule pods across nodes"
+    ],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "A Service Mesh like Istio handles service communication, security, and observability across microservices."
+  },
+  {
+    "question": "In Kubernetes, what is the best way to apply security context constraints automatically?",
+    "choices": [
+      "Manual pod reviews",
+      "Using Kyverno or OPA policies",
+      "Updating ConfigMaps",
+      "Using shell scripts"
+    ],
+    "correct": 1,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "OPA or Kyverno policies automate enforcement of security contexts to ensure compliance across workloads."
+  },
+  {
+    "question": "Which of the following best supports zero-trust networking in Kubernetes?",
+    "choices": [
+      "Flat network topology",
+      "Disabling NetworkPolicies",
+      "Using NetworkPolicies and mTLS",
+      "Running all services as root"
+    ],
+    "correct": 2,
+    "section": "Platform Observability, Security, and Conformance",
+    "explanation": "Zero-trust models use network segmentation and mutual authentication (mTLS) to limit exposure."
+  },
+  {
+    "question": "What is the benefit of having a centralized CI pipeline definition across teams?",
+    "choices": [
+      "Increased complexity",
+      "Standardized build and test processes",
+      "Manual execution of pipelines",
+      "Reduced automation"
+    ],
+    "correct": 1,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "Centralized CI templates ensure consistent, compliant, and reusable build processes across teams."
+  },
+  {
+    "question": "Which GitOps component monitors repositories and reconciles Kubernetes clusters?",
+    "choices": ["Prometheus", "ArgoCD or Flux", "Helm Charts", "Grafana"],
+    "correct": 1,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "GitOps controllers like ArgoCD or Flux monitor Git repositories and reconcile state changes automatically."
+  },
+  {
+    "question": "In a GitOps workflow, what happens when a new commit is pushed to the main branch?",
+    "choices": [
+      "A controller reconciles the environment to match the desired state in Git",
+      "The deployment must be triggered manually",
+      "The CI pipeline deletes all pods",
+      "Cluster access is revoked"
+    ],
+    "correct": 0,
+    "section": "Continuous Delivery & Platform Engineering",
+    "explanation": "In GitOps, controllers like ArgoCD detect changes and automatically reconcile environments to match Git state."
+  },
+  {
+    "question": "Which Kubernetes component is responsible for enforcing declared desired states?",
+    "choices": ["API Server", "Controller Manager", "Scheduler", "Kubelet"],
+    "correct": 1,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "The Controller Manager continuously reconciles actual resource states to match their desired specifications."
+  },
+  {
+    "question": "Which of the following best describes the Kubernetes Operator pattern?",
+    "choices": [
+      "A manual process for cluster upgrades",
+      "A controller managing custom resources to automate operational tasks",
+      "A script that restarts pods",
+      "A built-in Kubernetes command"
+    ],
+    "correct": 1,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "Operators automate complex lifecycle management tasks by watching custom resources and acting accordingly."
+  },
+  {
+    "question": "What advantage do APIs bring to internal developer platforms?",
+    "choices": [
+      "Enable self-service provisioning and integration",
+      "Reduce automation capabilities",
+      "Force manual approvals",
+      "Eliminate CI/CD needs"
+    ],
+    "correct": 0,
+    "section": "Platform APIs and Provisioning Infrastructure",
+    "explanation": "APIs allow developers to provision, deploy, and integrate services autonomously through programmable interfaces."
+  },
+  {
+    "question": "How does a developer portal improve platform adoption?",
+    "choices": [
+      "By requiring manual documentation updates",
+      "By providing a single interface for templates, APIs, and documentation",
+      "By limiting access to automation tools",
+      "By hiding platform features"
+    ],
+    "correct": 1,
+    "section": "IDPs and Developer Experience",
+    "explanation": "Developer portals centralize discovery, onboarding, and automation, encouraging platform adoption."
+  },
+  {
+    "question": "Which of the following helps measure developer experience improvements?",
+    "choices": [
+      "Increased self-service deployments and faster feedback loops",
+      "More manual change requests",
+      "Longer lead times for changes",
+      "Reduced number of automation tools"
+    ],
+    "correct": 0,
+    "section": "IDPs and Developer Experience",
+    "explanation": "Improved developer experience manifests as shorter feedback cycles and increased self-service adoption."
+  },
+  {
+    "question": "A team wants to know how quickly they recover from production incidents. Which metric should they use?",
+    "choices": [
+      "Lead Time for Changes",
+      "Mean Time to Recovery (MTTR)",
+      "Deployment Frequency",
+      "Change Failure Rate"
+    ],
+    "correct": 1,
+    "section": "Measuring Your Platform",
+    "explanation": "MTTR measures how fast a system or service recovers from failure, indicating operational resilience."
+  },
+  {
+    "question": "Which DORA metric measures change quality and stability?",
+    "choices": [
+      "Change Failure Rate",
+      "Deployment Frequency",
+      "Lead Time for Changes",
+      "Mean Time to Detect (MTTD)"
+    ],
+    "correct": 0,
+    "section": "Measuring Your Platform",
+    "explanation": "Change Failure Rate measures the proportion of deployments causing production issues — a quality indicator."
+  },
+  {
+    "question": "What combination of metrics best indicates overall platform performance and adoption?",
+    "choices": [
+      "MTTR, Deployment Frequency, Platform Adoption Rate",
+      "CPU Utilization, Network Bandwidth, Disk IO",
+      "Number of Pipelines, Lines of Code, Uptime",
+      "Pod Restarts, Node Count, Resource Limits"
+    ],
+    "correct": 0,
+    "section": "Measuring Your Platform",
+    "explanation": "Combining reliability (MTTR), velocity (Deployment Frequency), and usage (Adoption Rate) gives a holistic view of platform health."
+  }
+]
