@@ -1,0 +1,94 @@
+title: "[Experience]: "
+labels: ["experience", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your certification journey, study tips, or exam experience with the community!
+        
+  - type: dropdown
+    id: certification
+    attributes:
+      label: Which certification did you complete or are studying for?
+      description: Select the certification
+      options:
+        - KCNA (Kubernetes and Cloud Native Associate)
+        - KCSA (Kubernetes and Cloud Native Security Associate)
+        - CKA (Certified Kubernetes Administrator)
+        - CKAD (Certified Kubernetes Application Developer)
+        - CKS (Certified Kubernetes Security Specialist)
+        - PCA (Prometheus Certified Associate)
+        - CGOA (Certified GitOps Associate)
+        - CAPA (Certified Argo Project Associate)
+        - CCA (Cilium Certified Associate)
+        - CBA (Cilium Basics Associate)
+        - OTCA (OpenTelemetry Certified Associate)
+        - KCA (Kyverno Certified Associate)
+        - CNPA (Cloud Native Platform Associate)
+        - CNPE (Cloud Native Platform Engineer)
+        - LFCS (Linux Foundation Certified System Administrator)
+        - ICA (Istio Certified Associate)
+        - Multiple Certifications
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: status
+    attributes:
+      label: Certification Status
+      description: What's your current status?
+      options:
+        - Passed the exam
+        - Currently studying
+        - Planning to take the exam
+        - Retaking the exam
+    validations:
+      required: true
+      
+  - type: textarea
+    id: experience
+    attributes:
+      label: Your Experience
+      description: Share your journey, what worked well, challenges faced, etc.
+      placeholder: |
+        - How long did you study?
+        - What resources did you use?
+        - What topics were most challenging?
+        - Any tips for others?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: study-plan
+    attributes:
+      label: Study Plan & Resources (Optional)
+      description: Share your study schedule or favorite resources
+      placeholder: |
+        - Daily/weekly study routine
+        - Books, courses, or labs used
+        - Practice exam scores
+    validations:
+      required: false
+      
+  - type: textarea
+    id: exam-tips
+    attributes:
+      label: Exam Day Tips (Optional)
+      description: For those who have taken the exam, share your exam day experience
+      placeholder: |
+        - Time management strategies
+        - Difficult topics that appeared
+        - General advice
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By sharing your experience, you agree to follow our community guidelines
+      options:
+        - label: I agree to follow the community guidelines
+          required: true
+        - label: I will not share actual exam questions or violate the NDA
+          required: true

@@ -121,12 +121,36 @@ In addition to the 5 Kubestronaut certifications, Golden Kubestronauts must pass
 - When you pass all required certifications, expect to be emailed by CNCF within a business week for next steps
 - Certifications are valid for **2-3 years** depending on the exam
 
+## Community & Support
+
+Join our community discussions to connect with fellow learners!
+
+[![GitHub Discussions](https://img.shields.io/github/discussions/pmady/golden-kubestronaut-learning?style=for-the-badge&logo=github)](https://github.com/pmady/golden-kubestronaut-learning/discussions)
+
+### 💬 [Join the Discussion](https://github.com/pmady/golden-kubestronaut-learning/discussions)
+
+- **Ask Questions**: Get help with exam preparation and study materials
+- **Share Experiences**: Tell your certification journey and success stories
+- **Find Study Partners**: Connect with others preparing for the same exams
+- **Get Updates**: Stay informed about new content and resources
+
+### Discussion Categories
+
+- 📢 **Announcements** - Official updates and new content releases
+- ❓ **Q&A** - Ask questions and get answers from the community
+- 🎓 **Certification Discussions** - Dedicated categories for each certification
+- 🎯 **Study Groups** - Find or form study groups
+- 📝 **Exam Experiences** - Share your journey (respecting NDAs)
+- 💡 **Ideas & Suggestions** - Propose improvements and new features
+
+Please review our [Community Guidelines](https://github.com/pmady/golden-kubestronaut-learning/blob/main/.github/MODERATION_GUIDELINES.md) before participating.
+
 ## Contributing
 
 Contributions are welcome! Feel free to:
 
 - Add study resources and tips
-- Share exam experiences
+- Share exam experiences (via Discussions)
 - Improve documentation
 - Add practice exercises
 
