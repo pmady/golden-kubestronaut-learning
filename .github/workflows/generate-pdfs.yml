@@ -11,6 +11,10 @@ on:
       - '!**/SECURITY.md'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   generate-pdfs:
     runs-on: ubuntu-latest
