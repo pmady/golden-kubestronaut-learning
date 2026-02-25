@@ -1,0 +1,95 @@
+title: "[Study Group]: "
+labels: ["study-group", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Looking to form or join a study group? Connect with other learners here!
+        
+  - type: dropdown
+    id: certification
+    attributes:
+      label: Which certification are you studying for?
+      description: Select the certification
+      options:
+        - KCNA (Kubernetes and Cloud Native Associate)
+        - KCSA (Kubernetes and Cloud Native Security Associate)
+        - CKA (Certified Kubernetes Administrator)
+        - CKAD (Certified Kubernetes Application Developer)
+        - CKS (Certified Kubernetes Security Specialist)
+        - PCA (Prometheus Certified Associate)
+        - CGOA (Certified GitOps Associate)
+        - CAPA (Certified Argo Project Associate)
+        - CCA (Cilium Certified Associate)
+        - CBA (Cilium Basics Associate)
+        - OTCA (OpenTelemetry Certified Associate)
+        - KCA (Kyverno Certified Associate)
+        - CNPA (Cloud Native Platform Associate)
+        - CNPE (Cloud Native Platform Engineer)
+        - LFCS (Linux Foundation Certified System Administrator)
+        - ICA (Istio Certified Associate)
+        - Multiple Certifications
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: type
+    attributes:
+      label: Study Group Type
+      description: What are you looking for?
+      options:
+        - Looking to join an existing study group
+        - Starting a new study group
+        - One-time study session
+        - Long-term study partner
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: timezone
+    attributes:
+      label: Timezone/Region
+      description: Your general timezone or region
+      options:
+        - Americas (EST/PST)
+        - Europe (CET/GMT)
+        - Asia Pacific (IST/JST/AEST)
+        - Middle East/Africa
+        - Flexible/Asynchronous
+    validations:
+      required: true
+      
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe what you're looking for or offering
+      placeholder: |
+        - Your current study progress
+        - Preferred meeting frequency
+        - Communication platform (Discord, Slack, Zoom, etc.)
+        - Topics you want to focus on
+        - Target exam date (if any)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: availability
+    attributes:
+      label: Availability (Optional)
+      description: When are you typically available to study?
+      placeholder: |
+        - Days of the week
+        - Time of day
+        - Duration per session
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By posting, you agree to follow our community guidelines
+      options:
+        - label: I agree to follow the community guidelines
+          required: true

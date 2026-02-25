@@ -1,0 +1,82 @@
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking a question! Please provide as much detail as possible to help the community assist you.
+        
+  - type: dropdown
+    id: certification
+    attributes:
+      label: Which certification is this related to?
+      description: Select the certification your question is about
+      options:
+        - KCNA (Kubernetes and Cloud Native Associate)
+        - KCSA (Kubernetes and Cloud Native Security Associate)
+        - CKA (Certified Kubernetes Administrator)
+        - CKAD (Certified Kubernetes Application Developer)
+        - CKS (Certified Kubernetes Security Specialist)
+        - PCA (Prometheus Certified Associate)
+        - CGOA (Certified GitOps Associate)
+        - CAPA (Certified Argo Project Associate)
+        - CCA (Cilium Certified Associate)
+        - CBA (Cilium Basics Associate)
+        - OTCA (OpenTelemetry Certified Associate)
+        - KCA (Kyverno Certified Associate)
+        - CNPA (Cloud Native Platform Associate)
+        - CNPE (Cloud Native Platform Engineer)
+        - LFCS (Linux Foundation Certified System Administrator)
+        - ICA (Istio Certified Associate)
+        - General Question
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic Area
+      description: What topic does your question relate to?
+      options:
+        - Exam Preparation
+        - Hands-on Labs
+        - Quiz/Practice Questions
+        - Concepts & Theory
+        - Troubleshooting
+        - Study Resources
+        - Exam Booking/Scheduling
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Please describe your question in detail
+      placeholder: What would you like to know?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples that might help
+      placeholder: |
+        - What have you tried so far?
+        - Any error messages?
+        - Links to relevant documentation?
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this question, you agree to follow our community guidelines
+      options:
+        - label: I have searched existing discussions to avoid duplicates
+          required: true
+        - label: I agree to follow the community guidelines
+          required: true
