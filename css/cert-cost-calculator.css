@@ -1,0 +1,250 @@
+/* Calculator Container */
+.cert-calculator {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+/* Section Headers */
+.calculator-section h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Checkbox Grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cert-option {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.cert-option:hover {
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+.cert-option input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Cost Inputs */
+.cost-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.2);
+}
+
+/* Results Section */
+.results {
+    background: #f6f8fa;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border: 1px solid #e1e4e8;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.total {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e1e4e8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .cost-inputs {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0366d6;
+    border-color: #0366d6;
+}
+
+.btn-primary:hover {
+    background-color: #035fc7;
+    border-color: #0358b9;
+}
+
+/* Form Elements */
+select, input[type="text"], input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #24292e;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+select:focus, input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #0366d6;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.2);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* Responsive Table */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+th, td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #e1e4e8;
+}
+
+thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e1e4e8;
+    background-color: #f6f8fa;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+tbody tr:hover {
+    background-color: rgba(3, 102, 214, 0.05);
+}
